@@ -1,1 +1,149 @@
 
+* {
+    font-family: Monocraft;
+}
+
+.newsArticle {
+    min-height: 1000px;
+    font-family: Monocraft;
+    image-rendering: pixelated;
+    background-image: url(../img/spruceBg.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 256px;
+    margin-top: 60px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 40px;
+    width: 60%;
+    border-radius: 0px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.news {
+    margin: 20px;
+    margin-top: 35px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.newsIcon {
+    float: left;
+    margin-right: 10px;
+}
+
+.newsIcon img {
+    width: 50px;
+    height: 50px;
+}
+
+.newsBar {
+    font-size: 10px;
+    padding: 20px;
+    padding-top: 13px;
+    padding-bottom: 5px;
+    background-color: rgb(128, 127, 126);
+}
+
+.newsBar h1 {
+    float: right;
+    margin-top: 8px;
+    color: rgb(217, 217, 217);
+    font-family: Monocraft;
+}
+
+.newsTitle {
+    font-size: 16px;
+    padding: 20px;
+    padding-top: 13px;
+    padding-bottom: 5px;
+    background-color: rgb(243, 243, 243);
+}
+
+.newsTitle h1 {
+    margin-top: 8px;
+    color: rgb(128, 127, 126);
+    font-family: Minecrafter;
+}
+
+.newsDescription {
+    margin-top: 8px;
+    padding: 20px;
+    color: rgb(128, 127, 126);
+    font-family: Monocraft;
+}
+
+.newsDescription img {
+    width: 100%;
+    height: auto;
+}
+
+.nextPage {
+    margin-bottom: 40px;
+}
+
+.nextPage ul {
+    text-align: center;
+}
+
+.nextPage li {
+    display: inline;
+    padding: 7px;
+    margin: 3px;
+    background-color: rgb(100, 235, 28);
+    border: solid 2px black;
+    border-radius: 2px;
+}
+
+.nextPage a {
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    text-shadow: none;
+}
+
+.nextPage span {
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    text-shadow: none;
+}
+
+@media screen and (max-width: 1920px) {
+
+    .newsArticle {
+        margin-right: auto;
+        margin-left: auto;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+
+    .newsArticle {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+
+    .newsArticle {
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .newsArticle {
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        margin-top: 0px;
+        border-color: black;
+    }
+}
