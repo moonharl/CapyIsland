@@ -120,7 +120,7 @@ html, body {
 }
 
 .homeBackground {
-    background-image: url(../img/worldBg1.jpg);
+    background-image: url(../img/imgBg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
