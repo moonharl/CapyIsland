@@ -168,7 +168,7 @@ html, body {
 
 .whiteBoxImg1 {
     border: #ffffff solid 3px;
-    background-image: url(../img/worldBg.jpg);
+    background-image: url(../img/news/1.jpg);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -182,7 +182,7 @@ html, body {
 
 .whiteBoxImg2 {
     border: #ffffff solid 3px;
-    background-image: url(../img/worldBg.jpg);
+    background-image: url(../img/news/2.jpg);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -196,7 +196,7 @@ html, body {
 
 .whiteBoxImg3 {
     border: #ffffff solid 3px;
-    background-image: url(../img/worldBg.jpg);
+    background-image: url(../img/news/3.jpg);
     display: block;
     margin-left: auto;
     margin-right: auto;
