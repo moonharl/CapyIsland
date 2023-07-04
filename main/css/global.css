@@ -182,7 +182,7 @@ html, body {
 
 .whiteBoxImg2 {
     border: #ffffff solid 3px;
-    background-image: url(../img/news/2.jpg);
+    background-image: url(../img/imgBack.png);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -196,7 +196,7 @@ html, body {
 
 .whiteBoxImg3 {
     border: #ffffff solid 3px;
-    background-image: url(../img/news/3.jpg);
+    background-image: url(../img/imgBack.png);
     display: block;
     margin-left: auto;
     margin-right: auto;
