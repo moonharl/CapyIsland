@@ -68,8 +68,8 @@
 }
 
 .newsSubtitle {
-    font-size: 15px;
-    padding: 20px;
+    font-size: 12px;
+    text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: rgb(243, 243, 243);
