@@ -53,6 +53,14 @@
     font-family: Monocraft;
 }
 
+.newsBreakbar {
+    font-size: 10px;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(128, 127, 120);
+}
+
 .newsTitle {
     font-size: 16px;
     padding: 20px;
