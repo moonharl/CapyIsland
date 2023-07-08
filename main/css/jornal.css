@@ -98,6 +98,8 @@
 }
 
 .newsDescription img {
+    margin-right: auto;
+    margin-left: auto;
     float: center;
     width: 50%;
     height: auto;
