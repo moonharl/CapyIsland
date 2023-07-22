@@ -396,6 +396,14 @@ a.slide__next,
     height: 300px;
 }
 
+.homeBackground img { 
+     margin-right: auto; 
+     margin-left: auto; 
+     float: center; 
+     width: 60%; 
+     height: auto; 
+ }
+
 .homeTitle {
     padding-top: 40px;
     color: white;
