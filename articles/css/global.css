@@ -393,7 +393,7 @@ a.slide__next,
     background-position: center;
     text-align: center;
     max-width: 100%;
-    height: 300px;
+    height: auto;
 }
 
 .homeBackground img { 
