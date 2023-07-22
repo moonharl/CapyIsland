@@ -397,11 +397,12 @@ a.slide__next,
 }
 
 .homeBackground img { 
+     background-size: cover;
      margin-right: auto; 
      margin-left: auto; 
      float: center; 
      width: 100%; 
-     height: auto; 
+     height: 70%; 
  }
 
 .homeTitle {
