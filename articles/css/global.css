@@ -401,7 +401,7 @@ a.slide__next,
      margin-right: auto; 
      margin-left: auto; 
      float: center; 
-     width: auto; 
+     width: 100%; 
      height: auto; 
  }
 
