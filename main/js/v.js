@@ -2,7 +2,7 @@ var guess,random,input,riddle,usedArr;
 
 usedArr=[];
 
-over=3;
+over=2;
 
 score=0;
 
@@ -10,7 +10,7 @@ i=0;
 
 wrong=0;
 
-while(wrong<over && score<3){
+while(wrong<over && score<6){
   random=Math.ceil(Math.random()*6);
   
     if(random==1){
@@ -104,7 +104,7 @@ while(wrong<over && score<3){
   i++;
 
 }
-if(score!==1){
+if(score!==6){
   alert("ERRO! Respostas de segurança corretas insuficientes (6). Tente novamente.")
 }
 if(score==6){
