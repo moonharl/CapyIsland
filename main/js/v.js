@@ -50,7 +50,7 @@ while(wrong<over && score<3){
      
         
       }else{
-        alert("Correct")
+        alert("Resposta CORRETA")
        score++
         usedArr.push(random);
     }
@@ -66,7 +66,7 @@ while(wrong<over && score<3){
 }else{
        score++
   usedArr.push(random);
-  alert("Correct")
+  alert("Resposta CORRETA")
     }
     }
   if(random==5){
@@ -80,7 +80,7 @@ while(wrong<over && score<3){
 }else{
        score++
   usedArr.push(random);
-  alert("Correct")
+  alert("Resposta CORRETA")
     }
   }
   if(random==6){
@@ -94,7 +94,7 @@ while(wrong<over && score<3){
       
   }else{
        score++
-    alert("Correct")
+    alert("Resposta CORRETA")
     usedArr.push(random);
     }
     
@@ -105,10 +105,10 @@ while(wrong<over && score<3){
 
 }
 if(score!==3){
-  alert("You only scored "+score+" point(s) better luck next time!")
+  alert("ERRO! Respostas de segurança corretas insuficientes ("+score+"). Tente novamente.")
 }
 if(score==3){
-  alert("Congratulations, you scored "+score+" points, you win!")
+  alert("Respostas de segurança corretas atingidas ("+score+"). Sua chave de acesso é: C-637")
 }
 alert(usedArr);
 alert(i)
