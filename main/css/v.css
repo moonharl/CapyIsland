@@ -10,10 +10,10 @@
 
 .glitch {
    position: relative;
-   font-size: 37px;
+   font-size: 30px;
    font-family: Minecrafter;
    color: #FFFFFF;
-   letter-spacing: 3px;
+   letter-spacing: 2px;
    z-index: 1;
 }
 
@@ -23,7 +23,7 @@
    top: 0;
    left: -4px;
    width: 100%;
-   color: 37px;
+   color: 30px;
    background-color: #000000;
    overflow: hidden;
    clip: rect(0, 900px, 0, 0);
@@ -36,7 +36,7 @@
    top: 0;
    left: 4px;
    width: 100%;
-   color: 37px;
+   color: 30px;
    background-color: #000000;
    overflow: hidden;
    clip: rect(0, 900px, 0, 0);
