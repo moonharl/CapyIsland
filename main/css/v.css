@@ -53,7 +53,7 @@ $bgcolor: #111;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-body{
+.ai{
   background: $bgcolor;
   font-family: 'Bungee', cursive;
   text-transform: uppercase;
@@ -61,13 +61,13 @@ body{
   font-weight: bold;
   margin: 0;
 }
-#root{
+html {
   position: absolute;
   top: 50%;
   @include transform(translateY(-50%) translateX(-50%));
   left: 50%;
 }
-#text{
+body {
   top: 0;
   left: -$offset;
   color: yellow;
