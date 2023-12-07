@@ -104,11 +104,9 @@ while(wrong<over && score<3){
   i++;
 
 }
-if(score!==3){
-  alert("ERRO! Respostas de segurança corretas insuficientes ("+score+"). Tente novamente.")
+if(score!==1){
+  alert("ERRO! Respostas de segurança corretas insuficientes (6). Tente novamente.")
 }
-if(score==3){
+if(score==6){
   alert("Respostas de segurança corretas atingidas ("+score+"). Sua chave de acesso é: C-637")
 }
-alert(usedArr);
-alert(i)
