@@ -33,7 +33,7 @@ while(wrong<over && score<6){
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");       
       }else{
         alert("Resposta CORRETA")
-       scorusedArr.push(random);e++
+       score++
         usedArr.push(random);
     }
   }      
