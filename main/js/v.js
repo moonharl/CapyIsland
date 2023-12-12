@@ -51,9 +51,9 @@ while(wrong<over && score<6){
     }
   }
     if(random==4){
-    input=prompt("Abreviação da ilha.").toLowerCase();
+    input=prompt("Nome da ilha.").toLowerCase();
       
-      if(input!=="CI"){
+      if(input!=="capy island"){
         wrong++
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
 }else{
