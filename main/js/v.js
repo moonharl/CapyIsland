@@ -14,9 +14,9 @@ while(wrong<over && score<6){
   random=Math.ceil(Math.random()*6);
   
     if(random==1){
-    input=prompt("It is greater than God and more evil than the devil. The poor have it, the rich need it and if you eat it you’ll die. What is it?").toLowerCase();
+    input=prompt("Slogan da Lótus Studios.").toLowerCase();
       
-      if(input!=="nothing"){
+      if(input!=="experimentando os limites da criação"){
         wrong++
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
       }else{
@@ -26,9 +26,9 @@ while(wrong<over && score<6){
      }
   }
   if(random==2){
-    input=prompt("Until I am measured I am not known,Yet how you miss me when I have flown").toLowerCase();
+    input=prompt("Nosso experimento de representante. ").toLowerCase();
       
-      if(input!=="time"){
+      if(input!=="capy staff"){
         wrong++
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");       
       }else{
@@ -39,9 +39,9 @@ while(wrong<over && score<6){
   }      
 
   if(random==3){
-    input=prompt("").toLowerCase();
+    input=prompt("Data de abertura da ilha ao público novamente. Formato: 00/00/00").toLowerCase();
       
-      if(input!=="teapot"){
+      if(input!=="21/07/23"){
         wrong++
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
       }else{
