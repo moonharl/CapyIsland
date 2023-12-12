@@ -39,7 +39,7 @@ while(wrong<over && score<6){
   }      
 
   if(random==3){
-    input=prompt("What starts with a T, ends with a T, and has T in it?").toLowerCase();
+    input=prompt("").toLowerCase();
       
       if(input!=="teapot"){
         wrong++
@@ -51,9 +51,9 @@ while(wrong<over && score<6){
     }
   }
     if(random==4){
-    input=prompt("Say my name and I disappear. What am I?").toLowerCase();
+    input=prompt("Abreviação da ilha.").toLowerCase();
       
-      if(input!=="silence"){
+      if(input!=="CI"){
         wrong++
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
 }else{
@@ -65,7 +65,7 @@ while(wrong<over && score<6){
   if(random==5){
     input=prompt("Sobrenome para acesso.").toLowerCase();
       
-      if(input!=="vienisen"){
+      if(input!=="viniesen"){
         wrong++
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
 }else{
