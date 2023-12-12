@@ -63,9 +63,9 @@ while(wrong<over && score<6){
     }
     }
   if(random==5){
-    input=prompt("A box without hinges, lock or key, yet golden treasure lies within. What is it?").toLowerCase();
+    input=prompt("Sobrenome para acesso.").toLowerCase();
       
-      if(input!=="egg"){
+      if(input!=="vienisen"){
         wrong++
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
 }else{
@@ -77,7 +77,7 @@ while(wrong<over && score<6){
   if(random==6){
     input=prompt("O nome da nossa corporação. ").toLowerCase();
       alert(input);
-      if(input!=="vitória régia"){
+      if(input!=="vitória-régia"){
         wrong++
       alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
   }else{
