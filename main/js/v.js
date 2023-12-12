@@ -18,9 +18,9 @@ while(wrong<over && score<6){
       
       if(input!=="nothing"){
         wrong++
-      alert("Wrong, The answer is nothing. You now have guessed "+wrong+" question(s) wrong");
+      alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
       }else{
-        alert("Correct")
+        alert("Resposta CORRETA")
        score++
         usedArr.push(random);
      }
@@ -30,25 +30,20 @@ while(wrong<over && score<6){
       
       if(input!=="time"){
         wrong++
-      alert("Wrong, The answer is time. You now have guessed "+wrong+" question(s) wrong");
-      
-        
+      alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");       
       }else{
-        alert("Correct")
+        alert("Resposta CORRETA")
        scorusedArr.push(random);e++
         usedArr.push(random);
     }
-  }
-      
+  }      
 
   if(random==3){
     input=prompt("What starts with a T, ends with a T, and has T in it?").toLowerCase();
       
       if(input!=="teapot"){
         wrong++
-      alert("Wrong, The answer is teapot. You now have guessed "+wrong+" question(s) wrong");
-     
-        
+      alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
       }else{
         alert("Resposta CORRETA")
        score++
@@ -60,9 +55,7 @@ while(wrong<over && score<6){
       
       if(input!=="silence"){
         wrong++
-      alert("Wrong, The answer is silence. You now have guessed "+wrong+" question(s) wrong");
-      
-        
+      alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
 }else{
        score++
   usedArr.push(random);
@@ -74,9 +67,7 @@ while(wrong<over && score<6){
       
       if(input!=="egg"){
         wrong++
-      alert("Wrong, The answer is egg . You now have guessed "+wrong+" question(s) wrong");
-      
-        
+      alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
 }else{
        score++
   usedArr.push(random);
@@ -84,22 +75,16 @@ while(wrong<over && score<6){
     }
   }
   if(random==6){
-    input=prompt("What gets wetter as it dries?").toLowerCase();
+    input=prompt("O nome da nossa corporação. ").toLowerCase();
       alert(input);
-      if(input!=="towel"){
+      if(input!=="vitória régia"){
         wrong++
-      alert("Wrong, The answer is towel. You now have guessed "+wrong+" question(s) wrong");
-      
-        
-      
+      alert("ERRO! Resposta errada. Você respondeu "+wrong+" perguntas de forma incorreta.");
   }else{
        score++
     alert("Resposta CORRETA")
     usedArr.push(random);
     }
-    
-  
-
   }
   i++;
 
@@ -108,5 +93,5 @@ if(score!==6){
   alert("ERRO! Respostas de segurança corretas insuficientes (6). Tente novamente.")
 }
 if(score==6){
-  alert("Respostas de segurança corretas atingidas ("+score+"). Sua chave de acesso é: C-637")
+  alert("Respostas de segurança corretas atingidas ("+score+"). Sua chave de acesso é: C-637. Use-a como extensão do encurtador de link da administração.")
 }
