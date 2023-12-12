@@ -93,5 +93,5 @@ if(score!==6){
   alert("ERRO! Respostas de segurança corretas insuficientes (6). Tente novamente.")
 }
 if(score==6){
-  alert("Respostas de segurança corretas atingidas ("+score+"). Sua chave de acesso é: C-637. Use-a como extensão do encurtador de link da administração.")
+  alert("Respostas de segurança corretas atingidas ("+score+"). Sua chave de acesso é: CI-FILE-637. Use-a como extensão do encurtador de link da administração.")
 }
