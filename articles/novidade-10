@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <title>Noticia</title>
+
+    <link rel="stylesheet" href="css/global.css">
+ 
+</head>
+
+<body>
+    <div class="container">
+        <div class="bannerTop"></div>
+            
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="https://moonharl.github.io/CapyIsland/main/inicio.html">Voltar ao Início</a></li>
+                    <li><a href="https://moonharl.github.io/CapyIsland/main/jornal.html">Jornal</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+
+        <div class="homeBackground">
+            <img  
+             src="https://i.imgur.com/XIzR2L9.png" 
+            alt="">
+        </div>
+        <div class="clear"></div>
+
+        <div class="whiteButton">
+            <p>NOVO</p>
+        </div>
+        <div class="spacementBar"></div>
+
+        <div class="spacementBar">
+            <p class="textCenteredBold">ATUALIZAÇÃO BOLADA</p>
+            <p class="textCenteredLow">PATCH 0.13.0</p>
+        </div>
+
+        <div class="clear"></div>
+        <div class="newsArticle">
+
+            <div class="news">
+                <div class="newsDescription">
+                    <p>Essa é a última atualização do ano! Diversas coisas foram corrigidas e novos sistemas implementados. Vem dar uma olhada!</p>
+                    <br>
+                    <br>
+                    <p>ADIÇÕES (+)</p>
+                    <br>
+                    <p>- (CAPYTALINO) Mesa de Gelo</p>
+                    <p>- (CAPYTALINO) Banco de Gelo</p>
+                    <p>- Bola de Praia</p>
+                    <p>- Aba de informações extras no SmartCapy</p>
+                    <p>- Catálogo de itens para os Cubitos</p>
+                    <p>- Sistema de cuidados para o Cubito</p>
+                    <p>- Sistema de checar Cubito com SmartCapy</p>
+                    <p>- Memorial de Cubito</p>
+                    <p>- Estátua de Cubito</p>
+                    <p>- Sistema de música ambiente nos seguintes lugares: Praia, Ateliê e Loja de Roupas</p>
+                    <p>- (CAPYWEEN) Foices e Espadas agora podem ser reparadas com Fragmentos de Alma</p>
+                    <p>- Alma Perdida</p>
+                    <p>- Cão Demoníaco</p>
+                    <br>
+                    <br>
+                    <p>REMOÇÕES (×)</p>
+                    <br>
+                    <p>- Removido arquivos obsoletos</p>
+                    <br>
+                    <br>
+                    <p>REAJUSTES (=)</p>
+                    <br>
+                    <p>- (CAPYTALINO) Reajuste no pisca-pisca</p>
+                    <p>- (CAPYTALINO) Reajuste no stack máximo da Bengala Doce (6 > 16)</p>
+                    <p>- (CAPYTALINO) Reajuste no modelo do Biscoito de Gengibre</p>
+                    <p>- (CAPYTALINO) Reajuste no preço dos itens natalinos e na troca por bengalas</p>
+                    <p>- Reajuste no sistema de diálogos, otimizando perfomance</p>
+                    <p>- Reajuste no Caixote de Frutas (modelo está bugado por ora!)</p>
+                    <p>- Reajuste na quantidade de moedas ganhas nos jogos</p>
+                    <p>- Corrigido bug de blocos reforçados possuindo transparência</p>
+                    <p>- Corrigido bug de porta reforçada não funcionando com o dono</p>
+                    <p>- Corrigido bug de textura no leitor de cartão</p>
+                    <br>
+                    <br>
+                    <p>Essa é a hora perfeita para cuidar do seu Cubito como ele merece e decorar sua casa para as festas de fim de ano! Problemas encontrados após atualização devem ser encaminhados através do Discord.</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    
+        <div class="spacementBar">
+            <p class="textCenteredLow">Escrito por: Harley</p>
+            <p class="textCenteredLow">Publicado em: 29/11/2023</p>
+        </div>
+        <div class="spacementBar"></div>
+        <div class="spacementBar"></div>
+
+        <footer>
+            <p>Capy Island © 2018-2023. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+
+                     </html>
