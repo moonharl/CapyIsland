@@ -8,7 +8,7 @@
 html, body {
     height: 100%;
     image-rendering: pixelated;
-    background-image: url(../img/minenautica/background.png);
+    background-image: url(../img/background.png);
     background-repeat: repeat;
     background-position: center;
     background-size: 256px;
@@ -20,7 +20,7 @@ html, body {
     bottom: -30px;
     height: 20px;
     width: 20px;
-    background-image: url(../img/minenautica/bubble.png);
+    background-image: url(../img/bubble.png);
     background-repet: no-repeat;
     background-position: center;
     background-size: contain;
@@ -243,7 +243,7 @@ html, body {
     height: 300px;
     width: 100%;
     image-rendering: pixelated;
-    background-image: url(../img/minenautica/kelpHead.gif);
+    background-image: url(../img/kelpHead.gif);
     background-repeat: repeat-x;
     background-position: center;
     background-size: contain;
@@ -253,7 +253,7 @@ html, body {
     height: 150px;
     width: 100%;
     image-rendering: pixelated;
-    background-image: url(../img/minenautica/kelpBody.gif);
+    background-image: url(../img/kelpBody.gif);
     background-repeat: repeat-x;
     background-position: center;
     background-size: contain;
@@ -361,7 +361,7 @@ html, body {
 }
 
 .minenauticaLogo {
-    background-image: url(../img/minenautica/logo.png);
+    background-image: url(../img/logo.png);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -373,7 +373,7 @@ html, body {
 }
 
 .minenauticaBackground {
-    background-image: url(../img/minenautica/minenauticaBg.jpg);
+    background-image: url(../img/minenauticaBg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -443,7 +443,7 @@ html, body {
     width: 150px;
     height: 150px;
     border: white solid 1px;
-    background-image: url(../img/minenautica/minenauticaBg.jpg);
+    background-image: url(../img/minenauticaBg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
