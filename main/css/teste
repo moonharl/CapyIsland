@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ER-32px.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="ER-16px.png" sizes="16x16" />
+    <title>Minenautica</title>
+
+    <link rel="stylesheet" href="css/minenautica.css">
+    <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+    <script src="js/core.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bannerTop"></div>
+            
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./news.html">Jornal</a></li>
+                    <li><a href="./information.html">Informações</a></li>
+                    <li><a href="./shop.html">Loja</a></li>
+                    <li><a href="./help.html">Ajuda</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+
+        <div class="minenauticaBackground">      
+            <div class="spacementBar"></div>
+            <p class="homeTitle">BEM-VINDO ÀS PROFUNDEZAS</p>
+            <p class="homeText">Temos diversas aventuras e muita água envolvida.</p>
+            <p class="homeText">Conteúdo novo todo mês.</p>
+            <div class="spacementBar"></div>
+            <p class="minenauticaButton">TESTE</p>
+        </div>
+        <div class="clear"></div>
+        <div class="spacementBar"></div>
+
+        <div class="spacementBar">
+            <p class="textCenteredBold">ÚLTIMAS NOVIDADES</p>
+        </div>
+        <div class="whiteBoxImg1">
+            <p class="whiteButton">NOVO!</p>
+        </div>
+        <div class="spacementBar"></div>
+
+        <div class="whiteBoxImg2">
+            <p class="whiteButton">NOVO!</p>
+        </div> 
+        <div class="spacementBar"></div>
+
+        <div class="whiteBoxImg3">
+            <p class="whiteButton">NOVO!</p>
+        </div>        
+        <div class="clear"></div>
+
+        <div class="spacementBar"></div>
+
+        <div class="invisibleBox">
+            <p class="invisibleBoxText">Criarura de especie nao definida</p>
+            <div class="invisibleBoxImg"></div>
+        </div>   
+        <div class="invisibleBox">
+            <div class="invisibleBoxImg"></div>
+            <p class="invisibleBoxText">Criarura de especie nao definida</p>
+        </div>           
+        <div class="spacementBar"></div>
+
+        <div class="middleSection">
+            <div class="bannermiddle">
+            <div class="minenauticaLogo"></div>
+            <div class="co">
+                <img src="img/grass-block.gif" alt="">
+                <p class="cotitle">Feedback</p>
+                <p class="cotext">Esse bloco gira!<span class="cotext" id="versionNumber">..</span></p>
+            </div>
+
+            <div class="co">
+                <img src="img/cake.gif" alt="">
+                <p class="cotitle">Moonharl</p>
+                <p class="cotext">É uma delícia!</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="spacementBar"></div>
+        <div class="spacementBar"></div>
+        <div class="spacementBar"></div>
+
+        <div class="breakDown"></div>
+        <div class="comments">
+           <div class="latestNewsImg">
+               <div class="latestNewsLogo"></div>
+               <p class="latestNewsText">BUILD UPDATE</p>
+           </div>
+        </div>
+        <div class="clear"></div>
+        <div class="breakUp"></div>
+        <div class="spacementBar"></div>
+        </div>
+
+        <div class="wrapper">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+        </div>
+
+        <div class="kelpHead"></div>
+        <div class="kelpBody"></div>
+        <footer>
+            <p>Capy Island © 2018-2024. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
