@@ -28,6 +28,11 @@ html, body {
     src: url(../font/Minecrafter.ttf);
 }
 
+@font-face {
+    font-family: TickingTimebombBB;
+    src: url(../font/TickingTimebombBB.ttf);
+}
+
 .bannerTop {
     background-color: black;
     width: 100%;
