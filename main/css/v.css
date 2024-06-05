@@ -159,7 +159,8 @@ html, body {
 }
 
 .newsArticle {
-    min-height: 800px;
+    min-height: 50px;
+    font-size: 60px;
     font-family: TickingTimebombBB;
     background-color: #f5f5f5;
     margin-top: 60px;
