@@ -163,7 +163,8 @@ html, body {
     font-size: 60px;
     font-family: TickingTimebombBB;
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: black;
+    color: white;
     margin-top: 60px;
     margin-left: 10%;
     margin-right: 10%;
