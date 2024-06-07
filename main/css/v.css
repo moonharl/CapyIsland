@@ -6,10 +6,7 @@
 }
 
 html, body {
-    min-height: 100vh;
     height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto;
     image-rendering: pixelated;
     background-color: black;
     background-repeat: repeat;
@@ -555,7 +552,6 @@ footer {
     color: white;
     font-size: 15px;
     font-family: Monocraft;
-    margin-top: auto;
     padding-top: 15px;
     padding-bottom: 15px;
 }
