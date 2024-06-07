@@ -7,8 +7,7 @@
 
 html, body {
     height: 100%;
-    image-rendering: pixelated;
-    background-image: url(../img/loading.png);
+    background-color: black;
     background-repeat: repeat;
     background-position: center;
     background-size: 256px;
