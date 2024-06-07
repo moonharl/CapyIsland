@@ -168,17 +168,13 @@ html, body {
 
 .whiteBoxImg1 {
     border: #ffffff solid 3px;
-    background-image: url(../img/news1.png);
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
-    height: 250px;
     width: 50%;
-    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain
 }
 
 .whiteBoxImg2 {
