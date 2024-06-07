@@ -423,12 +423,13 @@ html, body {
     margin-right: auto;
     margin-bottom: 40px; 
     width: 60%;
-    background-color: #000000;
+    background-color: black;
     height: 500px;
 }
 
 .bannermiddle {
     background-size: contain;
+    background-color: black;
     background-position: center;
     height: 100%;
     padding-top: 40px;
@@ -514,6 +515,11 @@ li {
     color: black;
     font-size: 15px;
     font-family: Monocraft;
+}
+
+.botext a {
+    text-decoration: none;
+    color: #575757;
 }
 
 .cotitle {
