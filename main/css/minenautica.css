@@ -230,6 +230,34 @@
     color: white;
 }
 
+.projectButton {
+    border-top: #db8b3b solid 2px;
+    border-bottom: #523417 solid 2px;
+    background-color: #96581a;
+    font-family: Monocraft;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    padding: 1px;
+    float: middle;
+    height: 20px;
+    width: 80px;
+    background-position: center;
+    background-size: cover;
+}
+
+.projectButton:hover {
+    background-color: #1f150c;
+    border-top: #3b2817 solid 2px;
+    border-bottom: #0f0a06 solid 2px;
+    color: white;
+}
+
+.projectButton a {   
+    text-decoration: none;
+    color: white;
+}
+
 .breakUp {
     height: 128px;
     width: 100%;
