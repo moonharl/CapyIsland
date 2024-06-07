@@ -422,13 +422,13 @@ html, body {
     margin-left: auto; 
     margin-right: auto;
     margin-bottom: 40px; 
-    width: 60%;
+    width: 100%;
     background-color: black;
     height: 500px;
 }
 
 .bannermiddle {
-    background-size: contain;
+    background-size: cover;
     background-color: black;
     background-position: center;
     height: 100%;
