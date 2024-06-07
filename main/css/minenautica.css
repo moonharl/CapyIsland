@@ -523,7 +523,7 @@ li {
 }
 
 .cotitle {
-    color: white;
+    color: #ffffff;
     font-weight: bold;
     font-size: 20px;
     font-family: Monocraft;
@@ -531,14 +531,14 @@ li {
 
 .cotext {
     padding-top: 10px;
-    color: white;
+    color: #ffffff;
     font-size: 15px;
     font-family: Monocraft;
 }
 
 .cotext a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 .buttonsSocial {
