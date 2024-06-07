@@ -301,18 +301,32 @@ html, body {
     background-size: cover;
 }
 
+.whiteBoxImg4 {
+    border: #ffffff solid 0px;
+    background-image: url(../img/bg2.png);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 300px;
+    width: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .whiteButton {
-    border: #ffffff solid 2px;
+    border: #ffffff solid 0px;
     background-color: white;
     font-family: Monocraft;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 10px;
     text-align: center;
     color: black;
     padding: 1px;
     float: center;
-    height: 25px;
-    width: 70px;
+    height: 20px;
+    width: 80px;
     background-position: center;
     background-size: contain;
 }
