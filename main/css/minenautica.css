@@ -416,6 +416,18 @@
 }
 
 .minenauticaBackground {
+    background-image: url(../img/projectBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+}
+
+.minenauticaBackground {
     background-image: url(../img/vBG.png);
     background-size: cover;
     background-repeat: no-repeat;
