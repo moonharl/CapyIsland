@@ -261,20 +261,6 @@ html, body {
 
 .whiteBoxImg1 {
     border: #ffffff solid 3px;
-    background-image: url(../img/bg4.png);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    height: 250px;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.whiteBoxImg2 {
-    border: #ffffff solid 3px;
     background-image: url(../img/bg2.png);
     display: block;
     margin-left: auto;
@@ -284,7 +270,21 @@ html, body {
     width: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+}
+
+.whiteBoxImg2 {
+    border: #ffffff solid 3px;
+    background-image: url(../img/bg4.png);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 250px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .whiteBoxImg3 {
@@ -298,7 +298,7 @@ html, body {
     width: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 }
 
 .whiteButton {
