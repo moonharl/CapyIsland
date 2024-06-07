@@ -260,42 +260,42 @@ html, body {
 }
 
 .whiteBoxImg1 {
-    border: #ffffff solid 3px;
+    border: #ffffff solid 0px;
     background-image: url(../img/bg2.png);
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 250px;
-    width: 50%;
+    height: 300px;
+    width: 60%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .whiteBoxImg2 {
-    border: #ffffff solid 3px;
+    border: #ffffff solid 0px;
     background-image: url(../img/bg4.png);
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 250px;
-    width: 50%;
+    height: 300px;
+    width: 60%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .whiteBoxImg3 {
-    border: #ffffff solid 3px;
+    border: #ffffff solid 0px;
     background-image: url(../img/bg1.png);
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 250px;
-    width: 50%;
+    height: 300px;
+    width: 60%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
