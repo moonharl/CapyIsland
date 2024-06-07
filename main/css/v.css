@@ -8,6 +8,8 @@
 html, body {
     min-height: 100vh;
     height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
     image-rendering: pixelated;
     background-color: black;
     background-repeat: repeat;
