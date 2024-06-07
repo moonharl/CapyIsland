@@ -415,8 +415,8 @@ html, body {
 }
 
 .middleSection {
-    border-top: #ffd56b solid 6px;
-    border-bottom: #e89638 solid 14px;
+    border-top: #01020a solid 6px;
+    border-bottom: #080a1a solid 14px;
     display: block;
     margin-top: 60px; 
     margin-left: auto; 
@@ -514,6 +514,11 @@ li {
     color: black;
     font-size: 15px;
     font-family: Monocraft;
+}
+
+.cotext a {
+    text-decoration: none;
+    color: black;
 }
 
 .buttonsSocial {
