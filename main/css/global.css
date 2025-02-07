@@ -168,25 +168,27 @@ html, body {
 
 .whiteBoxImg1 {
     border: #ffffff solid 3px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain
-}
-
-.whiteBoxImg2 {
-    border: #ffffff solid 3px;
-    background-image: url(../img/news2.png);
+    background-image: url("https://i.imgur.com/u7Eg6Eh.jpeg");
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     height: 250px;
     width: 50%;
-    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.whiteBoxImg2 {
+    border: #ffffff solid 3px;
+    background-image: url("https://i.imgur.com/atdPhop.png");
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 250px;
+    width: 50%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -194,14 +196,13 @@ html, body {
 
 .whiteBoxImg3 {
     border: #ffffff solid 3px;
-    background-image: url(../img/news3.png);
+    background-image: url("https://i.imgur.com/bb0gYGp.png");
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     height: 250px;
     width: 50%;
-    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -218,7 +219,7 @@ html, body {
     padding: 1px;
     float: center;
     height: 25px;
-    width: 70px;
+    width: 200px;
     background-position: center;
     background-size: cover;
 }
