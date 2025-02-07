@@ -173,8 +173,8 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 30%;
-    width: 50%;
+    height: 280px;
+    width: 55%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -187,8 +187,8 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 30%;
-    width: 50%;
+    height: 280px;
+    width: 55%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -201,8 +201,8 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 30%;
-    width: 50%;
+    height: 280px;
+    width: 55%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -225,8 +225,8 @@ html, body {
 }
 .carousel {
     position: relative;
-    width: 40%;
-    height: 25%;
+    width: 50%;
+    height: 250px;
     overflow: hidden;
     margin: auto;
 }
@@ -243,15 +243,18 @@ html, body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: black;
+    width: 20px;
+    height: 20px;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: 40px; }
+.next { right: 40px; }
 
 .textCenteredLower {
     font-size: 20px;
