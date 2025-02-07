@@ -173,7 +173,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 250px;
+    height: 30%;
     width: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -187,7 +187,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 250px;
+    height: 30%;
     width: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -201,7 +201,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 250px;
+    height: 30%;
     width: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -219,14 +219,14 @@ html, body {
     padding: 1px;
     float: center;
     height: 25px;
-    width: 200px;
+    width: 40%;
     background-position: center;
     background-size: cover;
 }
 .carousel {
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 40%;
+    height: 25%;
     overflow: hidden;
     margin: auto;
 }
