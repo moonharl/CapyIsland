@@ -267,6 +267,7 @@ html, body {
     font-family: Monocraft;
     font-size: 30px;
     font-weight: bold;
+    z-index: 10;
 }
 .prev { left: 10px; }
 .next { right: 10px; }
