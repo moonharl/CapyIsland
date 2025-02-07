@@ -235,15 +235,20 @@ html, body {
 .carousel img.active {
     display: block;
 }
+
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    display: none;
+    opacity: 0; /* Torna invisível sem ocupar espaço */
+    transition: opacity 0.5s ease-in-out; /* Suaviza a transição */
 }
+
 .slide.active {
-    display: block;
+    opacity: 1; /* Torna a imagem ativa visível */
+    z-index: 1; /* Garante que fique na frente */
 }
+
 .caption {
     position: absolute;
     bottom: 0;
