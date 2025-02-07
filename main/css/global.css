@@ -173,13 +173,12 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 350px;
+    height: 360px;
     width: 55%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-
 .whiteBoxImg2 {
     border: #ffffff solid 3px;
     background-image: url('https://i.imgur.com/atdPhop.png');
@@ -187,13 +186,12 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 350px;
+    height: 360px;
     width: 55%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-
 .whiteBoxImg3 {
     border: #ffffff solid 3px;
     background-image: url("https://i.imgur.com/bb0gYGp.png");
@@ -201,7 +199,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 350px;
+    height: 360px;
     width: 55%;
     background-repeat: no-repeat;
     background-position: center;
@@ -214,29 +212,42 @@ html, body {
     font-family: Monocraft;
     font-weight: bold;
     font-size: 15px;
-    text-align: center;
+    text-align: left;
     color: black;
-    padding: 1px;
-    float: center;
-    height: 25px;
-    width: 40%;
-    background-position: center;
+    padding: 5px 10px;
+    display: inline-block;
+    background-position: left;
     background-size: cover;
 }
+
 .carousel {
     position: relative;
-    width: 50%;
+    width: 500px;
     height: 350px;
     overflow: hidden;
     margin: auto;
 }
-.carousel img {
+
+.slide {
+    position: absolute;
     width: 100%;
     height: 100%;
     display: none;
 }
-.carousel img.active {
+
+.slide.active {
     display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
 }
 .arrow {
     position: absolute;
