@@ -1,23 +1,24 @@
-        let index = 0;
-        const images = document.querySelectorAll(".carousel img");
-        const totalImages = images.length;
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
 
-        function showImage(i) {
-            images.forEach(img => img.classList.remove("active"));
-            images[i].classList.add("active");
-        }
-        
-        function nextImage() {
-            index = (index + 1) % totalImages;
-            showImage(index);
-        }
+function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+}
 
-        function prevImage() {
-            index = (index - 1 + totalImages) % totalImages;
-            showImage(index);
-        }
-        
-        document.querySelector(".next").addEventListener("click", nextImage);
-        document.querySelector(".prev").addEventListener("click", prevImage);
-        
-        setInterval(nextImage, 5000);
+function nextSlide() {
+    index = (index + 1) % totalSlides;
+    showSlide(index);
+}
+
+function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide(index);
+}
+
+document.querySelector(".next").addEventListener("click", nextSlide);
+document.querySelector(".prev").addEventListener("click", prevSlide);
+
+// Alterna automaticamente a cada 5 segundos
+setInterval(nextSlide, 5000);
