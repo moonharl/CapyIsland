@@ -229,7 +229,6 @@ html, body {
 .carousel img {
     width: 100%;
     height: 100%;
-    display: none;
     cursor: pointer;
 }
 .carousel img.active {
