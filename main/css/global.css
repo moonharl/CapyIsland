@@ -205,7 +205,6 @@ html, body {
     background-position: center;
     background-size: cover;
 }
-
 .whiteButton {
     border: #ffffff solid 2px;
     background-color: white;
@@ -223,22 +222,28 @@ html, body {
 .carousel {
     position: relative;
     width: 500px;
-    height: 350px;
+    height: 300px;
     overflow: hidden;
     margin: auto;
 }
-
+.carousel img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+}
+.carousel img.active {
+    display: block;
+}
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
     display: none;
 }
-
 .slide.active {
     display: block;
 }
-
 .caption {
     position: absolute;
     bottom: 0;
