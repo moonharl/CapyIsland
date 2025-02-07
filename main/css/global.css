@@ -250,6 +250,7 @@ html, body {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     color: white;
+    font-family: Monocraft;
     text-align: center;
     font-size: 14px;
     padding: 10px;
@@ -263,11 +264,12 @@ html, body {
     border: none;
     padding: 10px;
     cursor: pointer;
+    font-family: Monocraft;
     font-size: 30px;
     font-weight: bold;
 }
-.prev { left: -30px; }
-.next { right: -30px; }
+.prev { left: 10px; }
+.next { right: 10px; }
 
 .textCenteredLower {
     font-size: 20px;
