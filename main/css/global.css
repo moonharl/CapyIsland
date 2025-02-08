@@ -234,15 +234,24 @@ html, body {
     background-size: cover;
 }
 
-.carousel {
-    flex: 1;
+.comment {
     display: flex;
-    position: relative;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    width: 100%;
+    height: auto; /* Ajusta a altura conforme necessário */
+    gap: 10px; /* Espaço entre as setas e o carrossel */
+}
+
+.carousel {
+    flex: 1; /* Ocupa o espaço disponível entre as setas */
+    display: flex;
     justify-content: center; /* Centraliza os slides */
-    align-items: center;
-    max-width: 590px;
-    max-height: 331px;
+    align-items: center; /* Garante alinhamento vertical */
     overflow: hidden;
+    position: relative; /* Necessário para os slides ficarem corretamente */
+    max-width: 590px; /* Ajuste conforme necessário */
+    height: 331px; /* Ajuste conforme necessário */
 }
 
 .slide {
@@ -250,20 +259,21 @@ html, body {
     width: 100%;
     height: 100%;
     opacity: 0; /* Torna invisível sem ocupar espaço */
-    justify-content: center; /* Centraliza a imagem no slide */
-    display: flex;
-    align-items: center;
     transition: opacity 0.5s ease-in-out; /* Suaviza a transição */
-}
-.slide img {
-    max-width: 100%; /* Mantém a imagem responsiva */
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem no slide */
+    align-items: center;
 }
 
 .slide.active {
     opacity: 1; /* Torna a imagem ativa visível */
     z-index: 1; /* Garante que fique na frente */
+}
+
+.slide img {
+    max-width: 100%; /* Mantém a imagem responsiva */
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
 }
 
 .caption {
@@ -317,13 +327,11 @@ li {
 }
 
 .comments {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
     width: 100%;
-    height: auto; /* Ajusta a altura conforme necessário */
-    gap: 10px;
+    height: 100%;
+    text-align: center;
     background-color: white;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
