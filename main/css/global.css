@@ -351,6 +351,8 @@ li {
 }
 
 .cotext {
+    align-items: center; /* Centraliza o texto e a imagem */
+    text-align: center;
     padding-top: 10px;
     color: black;
     font-size: 15px;
