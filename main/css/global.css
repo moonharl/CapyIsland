@@ -292,13 +292,19 @@ html, body {
     color: white;
     font-family: Monocraft;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 10px;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
 }
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+    position: absolute;
+    left: -30px;
+}
+.next {
+    position: absolute;
+    right: -30px;
+}
 
 .textCenteredLower {
     font-size: 20px;
