@@ -171,6 +171,7 @@ html, body {
 }
 
 .whiteBoxImg1 {
+    position: relative;
     border: #ffffff solid 3px;
     background-image: url('https://i.imgur.com/u7Eg6Eh.jpeg');
     display: block;
@@ -184,6 +185,7 @@ html, body {
     background-size: cover;
 }
 .whiteBoxImg2 {
+    position: relative;
     border: #ffffff solid 3px;
     background-image: url('https://i.imgur.com/atdPhop.png');
     display: block;
@@ -197,6 +199,7 @@ html, body {
     background-size: cover;
 }
 .whiteBoxImg3 {
+    position: relative;
     border: #ffffff solid 3px;
     background-image: url("https://i.imgur.com/bb0gYGp.png");
     display: block;
@@ -210,6 +213,8 @@ html, body {
     background-size: cover;
 }
 .whiteButton {
+    position: absolute; /* Permite posicionamento preciso */
+    right: 10px;
     border: #ffffff solid 2px;
     background-color: white;
     font-family: Monocraft;
@@ -217,7 +222,7 @@ html, body {
     font-size: 15px;
     text-align: right;
     color: black;
-    padding: 15px 10px;
+    padding: 10px 10px;
     display: inline-block;
     background-position: right;
     background-size: cover;
@@ -225,8 +230,8 @@ html, body {
 
 .carousel {
     position: relative;
-    width: 690px;
-    height: 345px;
+    width: 590px;
+    height: 295px;
     overflow: hidden;
     margin: auto;
 }
