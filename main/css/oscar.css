@@ -58,13 +58,30 @@ html, body {
     color: white;
     font-weight: bold;
     text-align: center;
-    font-size: 35px;
+    font-size: 32px;
+    padding: 20px;
+}
+
+.articleTitleY {
+    color: #fff345;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
     padding: 20px;
 }
 
 .articleDescription {
-    font-size: 20px;
+    font-size: 18px;
     color: white;
+    padding: 0px 20px 10px 20px;
+    font-family: Monocraft;
+    text-align: center;
+}
+
+.articleDescription a {
+    font-size: 18px;
+    color: yellow;
+    text-decoration: none;
     padding: 0px 20px 10px 20px;
     font-family: Monocraft;
     text-align: center;
