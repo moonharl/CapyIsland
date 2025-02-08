@@ -30,7 +30,7 @@ html, body {
 .bannerTop {
     background-color: black;
     width: 100%;
-    height: 100px;
+    height: 103px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -118,7 +118,7 @@ html, body {
     padding-right: 100px;
     text-align: center;
     width: 100%;
-    height: 550px;
+    height: 530px;
 }
 .homeBackground a {
     text-decoration: none;
