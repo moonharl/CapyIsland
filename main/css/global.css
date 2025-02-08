@@ -359,6 +359,21 @@ li {
     font-family: Monocraft;
 }
 
+.coimg {
+    position: relative;
+    width: 300px;
+    height: 168px;
+    overflow: hidden;
+    margin: auto;
+}
+.coimg img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .buttonsSocial {
     background-image: url(../img/loading.png);
     background-repeat: no-repeat;
