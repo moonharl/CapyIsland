@@ -230,8 +230,8 @@ html, body {
 
 .carousel {
     position: relative;
-    width: 590px;
-    height: 295px;
+    width: 45%;
+    height: auto;
     overflow: hidden;
     margin: auto;
 }
