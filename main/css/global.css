@@ -110,7 +110,7 @@ html, body {
 }
 
 .homeBackground {
-    background-image: url(../img/imgBack.png);
+    background-image: url('https://i.imgur.com/QO9thMy.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
