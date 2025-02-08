@@ -91,21 +91,21 @@ html, body {
     text-decoration: none;
 }
 
-.carousela {
-    position: relative;
-    width: 800px;
-    height: 450px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: auto;
-}
-.carousela img {
+.containera {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Distribui os elementos */
     width: 100%;
-    height: 100%;
+    height: auto; /* Ajusta a altura conforme necessário */
 }
-.carousela img.active {
-    display: block;
+
+.carousela {
+    flex: 1; /* Ocupa o espaço disponível entre as setas */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem */
+    overflow: hidden;
+    position: relative; /* Necessário para o posicionamento absoluto dos slides */
+    height: 300px; /* Ajuste conforme necessário */
 }
 
 .slidea {
@@ -121,33 +121,24 @@ html, body {
     z-index: 1; /* Garante que fique na frente */
 }
 
-.captiona {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-family: Monocraft;
-    text-align: center;
-    font-size: 14px;
-    padding: 10px;
+.slidea img {
+    max-width: 100%; /* Mantém a imagem responsiva */
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
 }
+
 .arrowa {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    background: black;
+    background-color: black;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
     cursor: pointer;
-    font-family: Monocraft;
-    font-size: 30px;
-    font-weight: bold;
-    z-index: 10;
 }
-.preva { left: 10px; }
-.nexta { right: 10px; }
+
+.arrowa:hover {
+    background-color: gray;
+}
 
 .frames {
     text-align: center;
