@@ -241,7 +241,6 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    cursor: pointer;
 }
 .carousel img.active {
     display: block;
