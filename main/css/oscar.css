@@ -94,7 +94,7 @@ html, body {
 .carousela {
     position: relative;
     width: 800px;
-    height: auto;
+    height: 450px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
