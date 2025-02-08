@@ -91,6 +91,64 @@ html, body {
     text-decoration: none;
 }
 
+.carousela {
+    position: relative;
+    width: 60%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+.carousela img {
+    width: 100%;
+    height: 100%;
+}
+.carousela img.active {
+    display: block;
+}
+
+.slidea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Torna invisível sem ocupar espaço */
+    transition: opacity 1s ease-in-out; /* Suaviza a transição */
+}
+
+.slidea.active {
+    opacity: 1; /* Torna a imagem ativa visível */
+    z-index: 1; /* Garante que fique na frente */
+}
+
+.captiona {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: Monocraft;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+}
+.arrowa {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Monocraft;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 10;
+}
+.preva { left: 10px; }
+.nexta { right: 10px; }
+
 .frames {
     text-align: center;
 }
