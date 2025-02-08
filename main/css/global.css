@@ -215,18 +215,18 @@ html, body {
     font-family: Monocraft;
     font-weight: bold;
     font-size: 15px;
-    text-align: left;
+    text-align: right;
     color: black;
-    padding: 5px 10px;
+    padding: 15px 10px;
     display: inline-block;
-    background-position: left;
+    background-position: right;
     background-size: cover;
 }
 
 .carousel {
     position: relative;
-    width: 500px;
-    height: 250px;
+    width: 690px;
+    height: 345px;
     overflow: hidden;
     margin: auto;
 }
@@ -256,7 +256,7 @@ html, body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     font-family: Monocraft;
     text-align: center;
