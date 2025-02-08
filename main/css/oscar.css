@@ -4,7 +4,7 @@
 
 html, body {
     height: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(195,98,12,1) 100%);
+    background-color: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(195,98,12,1) 100%);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -18,7 +18,7 @@ html, body {
 
 .article {
     min-height: 500px;
-    background-color: white;
+    background-color: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(195,98,12,1) 100%);
     margin-top: 60px;
     margin-left: 10%;
     margin-right: 10%;
