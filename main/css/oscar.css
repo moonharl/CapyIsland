@@ -4,6 +4,7 @@
 
 html, body {
     height: 100%;
+    background-image: url(../img/0.png);
     background-color: black;
     background-repeat: no-repeat;
     background-position: top;
