@@ -11,6 +11,12 @@ html, body {
     background-repeat: repeat;
     background-position: center;
     background-size: 256px;
+    overflow: auto;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+}
+::-webkit-scrollbar {
+    display: none; /* Para navegadores baseados em WebKit (Chrome, Safari) */
 }
 
 .container {
