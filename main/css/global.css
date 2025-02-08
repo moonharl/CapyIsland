@@ -12,12 +12,8 @@ html, body {
     background-position: center;
     background-size: 256px;
 }
-main {
-    flex: 1;
-}
 
 .container {
-    height: 100%;
     width: 100%;
 }
 
@@ -360,6 +356,7 @@ li {
     padding-top: 10px;
     color: black;
     font-size: 15px;
+    font-weight: bold;
     font-family: Monocraft;
 }
 
@@ -421,13 +418,14 @@ li {
 }
 
 footer {
+    height: 300px;
     text-align: center;
     background-color: black;
     color: white;
     font-size: 15px;
     font-family: Monocraft;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 footer p {
