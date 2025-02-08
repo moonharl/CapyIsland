@@ -45,7 +45,7 @@ html, body {
     color: #2b2b2b;
     font-family: Monocraft;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: -150px;
 }
 
@@ -76,7 +76,7 @@ html, body {
 
 .menu li {
     display: flex; 
-    justify-content: center;
+    justify-content: left;
     padding: 10px;
 }
 
