@@ -25,4 +25,4 @@ document.querySelector(".next").addEventListener("click", nextSlide);
 document.querySelector(".prev").addEventListener("click", prevSlide);
 
 // Alterna automaticamente a cada 5 segundos
-setInterval(nextSlide, 5000);
+setInterval(nextSlide, 8000);
