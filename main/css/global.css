@@ -65,19 +65,18 @@ html, body {
 
 .menu {
     background-color: black;
-    margin-top: -80px;
+    margin-top: 0px;
 }
 
 .menu ul {
-    text-align: left;
-    padding-top: -60px;
-    padding: 20px;
+    display: flex;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0;
 }
 
 .menu li {
-    display: flex; 
-    justify-content: left;
-    padding: 10px;
+    margin-right: 20px
 }
 
 .menu a {
