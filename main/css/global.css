@@ -65,14 +65,14 @@ html, body {
 
 .menu {
     background-color: black;
-    margin-top: 0px;
+    margin-top: -40px;
 }
 
 .menu ul {
     display: flex;
     list-style: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o padding padrão */
-    margin: 0;
+    padding: 10px; /* Remove o padding padrão */
+    margin: 10px;
 }
 
 .menu li {
