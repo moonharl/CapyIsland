@@ -299,10 +299,12 @@ html, body {
 }
 .prev {
     position: absolute;
+    z-index: 10;
     left: -30px;
 }
 .next {
     position: absolute;
+    z-index: 10;
     right: -30px;
 }
 
