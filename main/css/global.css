@@ -301,12 +301,12 @@ html, body {
 .prev {
     position: absolute;
     z-index: 10;
-    left: -30px;
+    left: 30px;
 }
 .next {
     position: absolute;
     z-index: 10;
-    right: -30px;
+    right: 30px;
 }
 
 .textCenteredLower {
