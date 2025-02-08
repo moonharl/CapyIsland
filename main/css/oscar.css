@@ -107,8 +107,8 @@ html, body {
     align-items: center; /* Garante alinhamento vertical */
     overflow: hidden;
     position: relative; /* Necessário para os slides ficarem corretamente */
-    max-width: 500px; /* Ajuste conforme necessário */
-    height: 300px; /* Ajuste conforme necessário */
+    max-width: 800px; /* Ajuste conforme necessário */
+    height: 450px; /* Ajuste conforme necessário */
 }
 
 .slidea {
@@ -134,15 +134,11 @@ html, body {
 }
 
 .arrowa {
-    background-color: black;
     color: white;
     border: none;
     padding: 10px 15px;
-    font-size: 20px;
+    font-size: 17px;
     cursor: pointer;
-}
-.arrowa:hover {
-    background-color: gray;
 }
 
 .frames {
