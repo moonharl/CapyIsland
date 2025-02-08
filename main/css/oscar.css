@@ -134,6 +134,7 @@ html, body {
 }
 
 .arrowa {
+    background-color: transparent;
     color: white;
     border: none;
     padding: 10px 15px;
