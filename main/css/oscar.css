@@ -54,6 +54,14 @@ html, body {
     border-bottom: solid 1px white;
 }
 
+.articlesubtitle {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+}
+
 .articleTitle {
     color: white;
     font-weight: bold;
