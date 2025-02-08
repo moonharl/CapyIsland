@@ -3,7 +3,18 @@
 }
 
 html, body {
+    height: 100%;
+    background-image: none;
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(195,98,12,1) 100%);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    overflow: auto;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+}
+::-webkit-scrollbar {
+    display: none; /* Para navegadores baseados em WebKit (Chrome, Safari) */
 }
 
 .article {
