@@ -3,11 +3,20 @@
     font-family: Monocraft;
 }
 
+html, body {
+    height: 100%;
+    image-rendering: pixelated;
+    background-image: url(../img/spruceBg.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 256px;
+}
+
 .newsArticle {
     min-height: 1000px;
     font-family: Monocraft;
     image-rendering: pixelated;
-    background-image: url(../img/spruceBg.png);
+    background-image: none;
     background-repeat: repeat;
     background-position: center;
     background-size: 256px;
@@ -22,8 +31,8 @@
 }
 
 .news {
-    margin: 20px;
-    margin-top: 35px;
+    margin: 0px;
+    margin-top: 0px;
     background-color: rgb(243, 243, 243);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
