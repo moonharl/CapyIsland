@@ -4,7 +4,7 @@ const totalSlides = slides.length;
 
 function showSlide(i) {
     // Remove a classe 'active' de todos os slides
-    slides.forEach(slide => slide.classList.remove("active"));
+    slides.forEach(slidea => slidea.classList.remove("active"));
 
     // Adiciona a classe 'active' apenas ao slide correto
     slides[i].classList.add("active");
