@@ -235,13 +235,14 @@ html, body {
 }
 
 .carousel {
+    flex: 1;
+    display: flex;
     position: relative;
     justify-content: center; /* Centraliza os slides */
     align-items: center;
     max-width: 590px;
     max-height: 331px;
     overflow: hidden;
-    margin: auto;
 }
 
 .slide {
@@ -250,6 +251,7 @@ html, body {
     height: 100%;
     opacity: 0; /* Torna invisível sem ocupar espaço */
     justify-content: center; /* Centraliza a imagem no slide */
+    display: flex;
     align-items: center;
     transition: opacity 0.5s ease-in-out; /* Suaviza a transição */
 }
@@ -319,11 +321,15 @@ li {
 }
 
 .comments {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    width: 100%;
+    height: auto; /* Ajusta a altura conforme necessário */
+    gap: 10px;
     background-color: white;
     background-position: center;
     background-size: cover;
-    width: 100%;
-    height: 100%;
 }
 
 .co {
