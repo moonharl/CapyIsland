@@ -418,7 +418,8 @@ li {
 }
 
 footer {
-    height: 300px;
+    height: 100%;
+    min-height: 30px;
     text-align: center;
     background-color: black;
     color: white;
