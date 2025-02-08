@@ -145,6 +145,13 @@ html, body {
     font-size: 15px;
     font-family: Monocraft;
 }
+.homeText a {
+    text-decoration: none;
+    padding-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-family: Monocraft;
+}
 
 .breakUp {
     height: 128px;
