@@ -1,28 +1,37 @@
-let index = 0;
-const slides = document.querySelectorAll(".slide");
-const totalSlides = slides.length;
+document.addEventListener("DOMContentLoaded", function () {
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
 
-function showSlide(i) {
-    // Remove a classe 'active' de todos os slides
-    slides.forEach(slide => slide.classList.remove("active"));
+    // ✅ Garante que o primeiro slide seja visível no início
+    if (slides.length > 0) {
+        slides[0].classList.add("active");
+    }
 
-    // Adiciona a classe 'active' apenas ao slide correto
-    slides[i].classList.add("active");
-}
+    function showSlide(i) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[i].classList.add("active");
+    }
 
-function nextSlide() {
-    index = (index + 1) % totalSlides; // Avança no índice
-    showSlide(index);
-}
+    function nextSlide() {
+        index = (index + 1) % totalSlides;
+        showSlide(index);
+        resetTimer();
+    }
 
-function prevSlide() {
-    index = (index - 1 + totalSlides) % totalSlides; // Retrocede no índice
-    showSlide(index);
-}
+    function prevSlide() {
+        index = (index - 1 + totalSlides) % totalSlides;
+        showSlide(index);
+        resetTimer();
+    }
 
-// Adiciona eventos para as setas
-document.querySelector(".next").addEventListener("click", nextSlide);
-document.querySelector(".prev").addEventListener("click", prevSlide);
+    document.querySelector(".next").addEventListener("click", nextSlide);
+    document.querySelector(".prev").addEventListener("click", prevSlide);
 
-// Alterna automaticamente a cada 5 segundos
-setInterval(nextSlide, 8000);
+    let slideTimer = setInterval(nextSlide, 8000);
+
+    function resetTimer() {
+        clearInterval(slideTimer);
+        slideTimer = setInterval(nextSlide, 8000);
+    }
+});
