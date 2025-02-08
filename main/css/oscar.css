@@ -94,17 +94,20 @@ html, body {
 .containera {
     display: flex;
     align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Distribui os elementos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
     width: 100%;
     height: auto; /* Ajusta a altura conforme necessário */
+    gap: 10px; /* Espaço entre as setas e o carrossel */
 }
 
 .carousela {
     flex: 1; /* Ocupa o espaço disponível entre as setas */
     display: flex;
-    justify-content: center; /* Centraliza a imagem */
+    justify-content: center; /* Centraliza os slides */
+    align-items: center; /* Garante alinhamento vertical */
     overflow: hidden;
-    position: relative; /* Necessário para o posicionamento absoluto dos slides */
+    position: relative; /* Necessário para os slides ficarem corretamente */
+    max-width: 500px; /* Ajuste conforme necessário */
     height: 300px; /* Ajuste conforme necessário */
 }
 
@@ -114,6 +117,9 @@ html, body {
     height: 100%;
     opacity: 0; /* Torna invisível sem ocupar espaço */
     transition: opacity 1s ease-in-out; /* Suaviza a transição */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem no slide */
+    align-items: center;
 }
 
 .slidea.active {
@@ -135,7 +141,6 @@ html, body {
     font-size: 20px;
     cursor: pointer;
 }
-
 .arrowa:hover {
     background-color: gray;
 }
