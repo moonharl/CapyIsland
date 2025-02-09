@@ -37,7 +37,7 @@ html, body {
 .bannerTop {
     background-color: black;
     width: 100%;
-    height: 103px;
+    height: 70px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -70,19 +70,19 @@ html, body {
 }
 
 .menu {
-    background-color: black;
-    margin-top: -80px;
+    position: absolute;
+    z-index: 10;
+    margin-top: -15px;
 }
 
 .menu ul {
     display: flex;
     list-style: none; /* Remove os marcadores da lista */
     padding: 20px; /* Remove o padding padrão */
-    margin: 10px;
 }
 
 .menu li {
-    margin-right: 20px
+    margin-right: 25px
 }
 
 .menu a {
@@ -583,7 +583,7 @@ footer p {
     }
 
     .menu {
-        margin-top: -100px;
+        margin-top: 0px;
     }
     
     .menu li {
