@@ -64,9 +64,9 @@ html, body {
 
 .newsBreakbar {
     font-size: 10px;
-    padding: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 35px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     background-color: rgb(186, 186, 186);
 }
 
@@ -85,10 +85,10 @@ html, body {
 }
 
 .newsSubtitle {
-    font-size: 10px;
+    font-size: 11px;
     text-align: center;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     background-color: rgb(243, 243, 243);
 }
 
@@ -100,6 +100,7 @@ html, body {
 }
 
 .newsDescription {
+    font-size: 7px;
     margin-top: 8px;
     padding: 20px;
     color: rgb(128, 127, 126);
@@ -109,8 +110,10 @@ html, body {
 .newsDescription img {
     margin: 0 auto;
     display: block;
-    width: 30%;
-    height: 30%;
+    opacity: 0.6;
+    filter: grayscale(30%);
+    width: 25%;
+    height: 25%;
 }
 
 .nextPage {
