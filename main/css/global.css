@@ -444,6 +444,8 @@ li {
 }
 
 footer {
+    position: absolute;
+    bottom: 0px;
     text-align: center;
     background-color: black;
     color: white;
@@ -559,7 +561,6 @@ footer p {
     }
 
     .comments{
-        display: flex; 
         justify-content: center;
         font-size: 10px;
     }
