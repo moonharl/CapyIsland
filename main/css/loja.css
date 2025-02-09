@@ -6,11 +6,11 @@
     min-height: 500px;
     background-color: white;
     margin-top: 40px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 20px;
     border-radius: 0px;
-    width: 70%;
+    width: 60%;
     border-top: solid 0px black;
     border-bottom: solid 1px white;
 }
@@ -21,6 +21,7 @@
     height: auto;
     border: solid 4px #c9c9c9;
     overflow: hidden;
+    background-color: #c9c9c9;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
