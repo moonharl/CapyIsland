@@ -1,0 +1,584 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+    image-rendering: pixelated;
+    background-image: url(../img/loading.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 256px;
+    overflow: auto;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+}
+::-webkit-scrollbar {
+    display: none; /* Para navegadores baseados em WebKit (Chrome, Safari) */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+@font-face {
+    font-family: Monocraft;
+    src: url(../font/Monocraft.ttf);
+}
+
+@font-face {
+    font-family: Minecrafter;
+    src: url(../font/Minecrafter.ttf);
+}
+
+.bannerTop {
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bannerTop a {
+    text-decoration: none;
+}
+
+.bar {
+    height: 5px;
+    background-color: rgb(168, 93, 0);
+}
+
+.spacementBar {
+    width: 100%;
+    height: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu {
+    position: absolute;
+    z-index: 10;
+    top: -5px;
+    left: 20px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 20px; /* Remove o padding padrão */
+}
+
+.menu li {
+    margin-right: 25px
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-family: Monocraft;
+}
+
+.menu a:hover {
+    color: rgb(149, 240, 101);
+}
+
+.mineButton {
+    border-top: #6AC34BFF solid 2px;
+    border-right: #6AC34BFF solid 2px;
+    border-bottom: #2A641AFF solid 2px;
+    border-left: #2A641AFF solid 2px;
+    background-color: #3D8428FF;
+    text-align: center;
+    padding: 2px;
+    float: left;
+    height: 25px;
+    width: 80px;
+    background-position: center;
+    background-size: cover;
+}
+
+.mineButton:hover {
+    background-color: black;
+    border: black solid 2px;
+    color: white;
+}
+
+.mineButton a {   
+    text-decoration: none;
+    font-family: Monocraft;
+    font-size: 14px;
+    color: white;
+}
+
+.homeBackground {
+    background-image: url('https://i.imgur.com/QO9thMy.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    width: 100%;
+    height: 530px;
+}
+.homeBackground a {
+    text-decoration: none;
+    padding-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-family: Monocraft;
+}
+
+.homeTitle {
+    padding-top: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Monocraft;
+}
+
+.homeText {
+    padding-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-family: Monocraft;
+}
+.homeText a {
+    text-decoration: none;
+    padding-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-family: Monocraft;
+}
+
+.breakUp {
+    height: 128px;
+    width: 100%;
+    image-rendering: pixelated;
+    background-image: url(../img/breakUp.png);
+    background-repeat: repeat-x;
+    background-position: center;   
+    background-size: contain;
+}
+
+.breakDown {
+    height: 128px;
+    width: 100%;
+    image-rendering: pixelated;
+    background-image: url(../img/breakDown.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+}
+
+.whiteBoxImg1 {
+    position: relative;
+    border: #ffffff solid 3px;
+    background-image: url('https://i.imgur.com/Aps1PsQ.jpeg');
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 370px;
+    width: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.whiteBoxImg2 {
+    position: relative;
+    border: #ffffff solid 3px;
+    background-image: url('https://i.imgur.com/atdPhop.png');
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 370px;
+    width: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.whiteBoxImg3 {
+    position: relative;
+    border: #ffffff solid 3px;
+    background-image: url("https://i.imgur.com/bb0gYGp.png");
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 370px;
+    width: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.whiteButton {
+    position: absolute; /* Permite posicionamento preciso */
+    right: 0px;
+    border: #ffffff solid 2px;
+    background-color: white;
+    font-family: Monocraft;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: right;
+    color: black;
+    padding: 10px 10px;
+    display: inline-block;
+    background-position: right;
+    background-size: cover;
+}
+
+.comment {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    width: 100%;
+    height: auto; /* Ajusta a altura conforme necessário */
+    gap: 10px; /* Espaço entre as setas e o carrossel */
+}
+
+.carousel {
+    flex: 1; /* Ocupa o espaço disponível entre as setas */
+    display: flex;
+    justify-content: center; /* Centraliza os slides */
+    align-items: center; /* Garante alinhamento vertical */
+    overflow: hidden;
+    position: relative; /* Necessário para os slides ficarem corretamente */
+    max-width: 590px; /* Ajuste conforme necessário */
+    height: 331px; /* Ajuste conforme necessário */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Torna invisível sem ocupar espaço */
+    transition: opacity 0.5s ease-in-out; /* Suaviza a transição */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem no slide */
+    align-items: center;
+}
+
+.slide.active {
+    opacity: 1; /* Torna a imagem ativa visível */
+    z-index: 1; /* Garante que fique na frente */
+}
+
+.slide img {
+    max-width: 100%; /* Mantém a imagem responsiva */
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: Monocraft;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+}
+.arrow {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: Monocraft;
+    border: none;
+    padding: 4px 8px;
+    font-size: 29px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.prev {
+    position: absolute;
+    z-index: 10;
+    left: 30px;
+}
+.next {
+    position: absolute;
+    z-index: 10;
+    right: 30px;
+}
+
+.textCenteredLower {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Monocraft;
+}
+
+.textCenteredBold {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Monocraft;
+    font-weight: bold;
+}
+
+li {
+    color: white;
+    font-size: 20px;
+    font-family: Monocraft;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+}
+
+.comments {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.co {
+    display: inline;
+    float: center;
+    width: 50%;
+    height: 200px;
+    text-align: center;
+    padding: 20px;
+    padding-top: 20px;
+    background-color: white;
+}
+
+.co img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-bottom: 10px;
+}
+
+.cotitle {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Monocraft;
+}
+
+.cotext {
+    align-items: center; /* Centraliza o texto e a imagem */
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Monocraft;
+}
+
+.coimg {
+    position: relative;
+    width: 300px;
+    height: 168px;
+    overflow: hidden;
+    margin: auto;
+}
+.coimg img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.buttonsSocial {
+    background-image: url(../img/loading.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    height: 200px;
+}
+
+.butBox {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+.butIcon {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.butIcon img {
+    width: 64px;
+}
+
+.butBoxDiscord {
+    margin-top: -30px;
+    color: white;
+    font-size: 20px;
+    font-family: Monocraft;
+    text-shadow: 2px 0 0 #212121, -2px 0 0 #212121, 0 2px 0 #212121, 0 -2px 0 #212121, 1px 1px #212121, -1px -1px 0 #212121, 1px -1px 0 #212121, -1px 1px 0 #212121;
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 15px;
+    float: right;
+}
+
+.butIconDiscord img {
+    width: 64px;
+    float: right;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-family: Monocraft;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+footer p {
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 1302px) {
+
+
+    .butBoxDiscord {
+        margin-top: -40px;
+    }
+
+    .butIcon {
+        margin-right: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1146px) {
+
+
+    .butBoxDiscord {
+        margin-top: -30px;
+        font-size: 0px;
+        background-color: #2b2b2b00;
+        float: left;
+    }
+
+    .butIcon {
+        float: left;
+        margin-right: 150px;
+    }
+
+}
+
+@media screen and (max-width: 1132px) {
+
+    .butBox {
+        padding-top: 70px;
+    }
+
+    .butIcon {
+        float: none;
+        display: inline;
+        margin-right: 15%;
+    }
+
+    .butBoxDiscord {
+        margin-top: -100px;
+        font-size: 0px;
+        background-color: #2b2b2b00;
+        float: none;
+    }
+
+}
+
+@media screen and (max-width: 1079px) {
+
+    .butBox {
+        padding: 30px;
+        padding-top: 70px;
+    }
+
+    .butIcon {
+        margin-right: 15%;
+    }
+
+    .menu li {
+        display: inline;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+
+    .butIcon {
+        margin-right: 13%;
+    }
+
+    .menu li {
+        display: inline;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 757px) {
+
+    .butIcon {
+        margin-right: 10%;
+    }
+
+    .menu {
+        margin-top: 0px;
+    }
+    
+    .menu li {
+        display: inline;
+        padding: 10px;
+    }
+
+    .menu a{
+        font-size: 10px;
+    }
+
+    .comments{
+        justify-content: center;
+        font-size: 10px;
+    }
+
+    .butIconDiscord img {
+        width: 60px;
+        float: right;
+        margin-right: -30px;
+    }
+
+}
+
+
+@media screen and (max-width: 560px) {
+    .butIcon {
+        margin-right: 5%;
+    }
+
+}
