@@ -64,7 +64,7 @@ html, body {
 .menu {
     position: absolute;
     z-index: 10;
-    top: -15px;
+    top: -5px;
 }
 
 .menu ul {
