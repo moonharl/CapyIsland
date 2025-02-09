@@ -100,7 +100,6 @@ html, body {
 }
 
 .newsDescription {
-    font-size: 7px;
     margin-top: 8px;
     padding: 20px;
     color: rgb(128, 127, 126);
@@ -110,10 +109,10 @@ html, body {
 .newsDescription img {
     margin: 0 auto;
     display: block;
-    opacity: 0.6;
-    filter: grayscale(30%);
-    width: 25%;
-    height: 25%;
+    opacity: 0.75;
+    filter: grayscale(35%);
+    width: 27%;
+    height: 27%;
 }
 
 .nextPage {
