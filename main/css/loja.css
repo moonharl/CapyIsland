@@ -5,12 +5,12 @@
 .article {
     min-height: 500px;
     background-color: white;
-    margin-top: 60px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 20px;
     border-radius: 0px;
-    width: 80%;
+    width: 70%;
     border-top: solid 0px black;
     border-bottom: solid 1px white;
 }
@@ -19,6 +19,7 @@
     position: relative;
     width: 50%;
     height: auto;
+    border: solid 4px #c9c9c9;
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -46,7 +47,15 @@
 .articleTitle {
     font-weight: bold;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
+    padding: 20px;
+}
+.articleTitleI {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    color: #a34d17;
+    font-size: 30px;
     padding: 20px;
 }
 
