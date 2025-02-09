@@ -3,6 +3,13 @@ document.addEventListener("contextmenu", function(event) {
     event.preventDefault();
 });
 
+// Impede o arrasto das imagens
+document.querySelectorAll('img').forEach(function(img) {
+    img.addEventListener('dragstart', function(event) {
+        event.preventDefault(); // Impede o arrasto da imagem
+    });
+});
+
 // Bloqueia atalhos específicos de teclado
 document.addEventListener("keydown", function(event) {
     // Impede o Ctrl + U (Visualizar código-fonte)
