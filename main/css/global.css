@@ -5,6 +5,7 @@
 }
 
 html, body {
+    position: relative;
     height: 100%;
     image-rendering: pixelated;
     background-image: url(../img/loading.png);
@@ -445,14 +446,14 @@ li {
 
 footer {
     position: absolute;
-    bottom: 0px;
+    width: 100%;
     text-align: center;
     background-color: black;
     color: white;
-    font-size: 15px;
+    font-size: 12px;
     font-family: Monocraft;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 footer p {
