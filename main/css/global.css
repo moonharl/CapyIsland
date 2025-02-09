@@ -66,6 +66,8 @@ html, body {
 .menu {
     background-color: black;
     margin-top: 10px;
+    position: absolute;
+    z-index: 10;
 }
 
 .menu ul {
@@ -97,7 +99,7 @@ html, body {
     border-left: #2A641AFF solid 2px;
     background-color: #3D8428FF;
     text-align: center;
-    padding: 1px;
+    padding: 2px;
     float: left;
     height: 25px;
     width: 80px;
