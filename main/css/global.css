@@ -289,12 +289,12 @@ html, body {
     padding: 10px;
 }
 .arrow {
-    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     font-family: Monocraft;
     border: none;
-    padding: 8px 10px;
-    font-size: 30px;
+    padding: 4px 8px;
+    font-size: 29px;
     font-weight: bold;
     cursor: pointer;
 }
