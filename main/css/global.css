@@ -91,25 +91,23 @@ html, body {
     color: rgb(149, 240, 101);
 }
 
-.mineButton {
-    border-top: #6AC34BFF solid 2px;
-    border-right: #6AC34BFF solid 2px;
-    border-bottom: #2A641AFF solid 2px;
-    border-left: #2A641AFF solid 2px;
-    background-color: #3D8428FF;
-    text-align: center;
-    padding: 2px;
-    float: left;
-    height: 25px;
-    width: 80px;
-    background-position: center;
-    background-size: cover;
+.mineButton.primary {
+    background-color: #3c8527;
+    border: var(--border-thickness) solid #639d52;
+    box-shadow: 0px var(--border-2x-thickness) 0px #1d4d13, 0 0 0 var(--border-thickness) #1a1a1b, 0 var(--border-2x-thickness) 0 var(--border-thickness) #1a1a1b;
+    color: white;
 }
 
-.mineButton:hover {
-    background-color: black;
-    border: black solid 2px;
+.mineButton {
+    display: inline-block;
+    font-family: 'Minecraft', sans-serif;
+    font-size: var(--button-font-size);
     color: white;
+    padding: 8px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.05s ease-in-out;
+    min-width: 200px;
 }
 
 .mineButton a {   
