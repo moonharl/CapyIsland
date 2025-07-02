@@ -96,17 +96,10 @@ html, body {
     color: rgb(149, 240, 101);
 }
 
-.mineButton:hover {
-    background-color: #28511d;
-    border: var(--border-thickness) solid #537549;
-    box-shadow: 0 0 0 var(--border-thickness) #1a1a1b;
-    color: white;
-}
-
 .mineButton {
-    background-color: #3c8527;
-    border: var(--border-thickness) solid #639d52;
-    box-shadow: 0px var(--border-2x-thickness) 0px #1d4d13, 0 0 0 var(--border-thickness) #1a1a1b, 0 var(--border-2x-thickness) 0 var(--border-thickness) #1a1a1b;
+    background-color: #F4EA8A;
+    border: var(--border-thickness) solid #FFF7A4;
+    box-shadow: 0px var(--border-2x-thickness) 0px #877A14, 0 0 0 var(--border-thickness) #7B4B18, 0 var(--border-2x-thickness) 0 var(--border-thickness) #7B4B18;
     display: inline-block;
     font-family: 'Minecraft', sans-serif;
     font-size: var(--button-font-size);
