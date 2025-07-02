@@ -42,6 +42,7 @@ html, body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    box-shadow: 0px var(--border-2x-thickness) 0px #b1b2b5, 0 var(--border-2x-thickness) 0 var(--border-thickness) rgba(0, 0, 0, 0.5);
 }
 
 .bannerTop a {
