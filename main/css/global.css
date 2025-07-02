@@ -20,6 +20,11 @@ html, body {
     display: none; /* Para navegadores baseados em WebKit (Chrome, Safari) */
 }
 
+:root {
+    --border-thickness: 3px;
+    --border-2x-thickness: calc(2 * var(--border-thickness));
+}
+
 .container {
     position: relative;
     width: 100%;
