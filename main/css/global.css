@@ -111,11 +111,11 @@ html, body {
     font-family: 'Minecraft', sans-serif;
     font-size: var(--button-font-size);
     color: white;
-    padding: 8px 20px;
+    padding: 8px 15px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.05s ease-in-out;
-    min-width: 200px;
+    min-width: 150px;
 }
 
 .mineButton a {   
