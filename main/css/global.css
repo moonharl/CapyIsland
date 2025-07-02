@@ -96,9 +96,9 @@ html, body {
 }
 
 .mineButton {
-    background-color: #E2D879;
-    border: var(--border-thickness) solid #FFF7A4;
-    box-shadow: 0px var(--border-2x-thickness) 0px #877A14, 0 0 0 var(--border-thickness) #5E3D1A, 0 var(--border-2x-thickness) 0 var(--border-thickness) #5E3D1A;
+    background-color: #D4C73E;
+    border: var(--border-thickness) solid #E8DD6E;
+    box-shadow: 0px var(--border-2x-thickness) 0px #877A14, 0 0 0 var(--border-thickness) #482A0B, 0 var(--border-2x-thickness) 0 var(--border-thickness) #482A0B;
     display: inline-block;
     font-family: 'Minecraft', sans-serif;
     font-size: 14px;
