@@ -12,6 +12,7 @@ html, body {
     background-repeat: repeat;
     background-position: center;
     background-size: 256px;
+    background-color: black;
     overflow: auto;
     scrollbar-width: none; /* Para Firefox */
     -ms-overflow-style: none; /* Para Internet Explorer e Edge */
