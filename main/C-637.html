@@ -32,6 +32,28 @@
             <div class="co">
             <img src="https://i.imgur.com/mQDTMI2.gif" alt="">
             <div class="botext">
+
+  <input type="text" id="codigo" placeholder="Ex: 123">
+  <button onclick="abrirAba()">Abrir</button>
+
+  <script>
+    function abrirAba() {
+      const codigo = document.getElementById("codigo").value;
+
+      // lista de códigos e links
+      const abas = {
+        "123": "https://www.google.com",
+        "456": "https://www.youtube.com",
+        "789": "https://www.wikipedia.org"
+      };
+
+      if (abas[codigo]) {
+        window.open(abas[codigo], "_blank");
+      } else {
+        alert("Código inválido");
+      }
+    }
+  </script>
                 <p class="botitle">EVENTOS</p>
                 <br>
                 <a href="https://drive.google.com/file/d/1a4oLHcwvktwmmSeAlPWaHOt52wwSoX69/view?usp=drive_link">CAPYWEEN.zip</a>
