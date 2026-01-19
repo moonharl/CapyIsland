@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
     const totalSlides = slides.length;
 
-    // ✅ Garante que o primeiro slide seja visível no início
     if (slides.length > 0) {
         slides[0].classList.add("active");
     }
