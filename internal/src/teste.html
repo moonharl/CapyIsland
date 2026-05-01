@@ -4,7 +4,7 @@
   html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* remove barra de rolagem */
+  overflow: hidden;
 }
   
 .intro {
@@ -28,7 +28,6 @@
   max-height: 90vh;
 }
 
-/* esconder scrollbar */
 #terminal::-webkit-scrollbar {
   display: none;
 }
@@ -36,7 +35,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-/* HUD no canto direito */
+
 #hud {
   position: fixed;
   top: 20px;
@@ -182,8 +181,6 @@ function typeText(text, callback) {
     if (i < text.length) {
       terminal.innerHTML += text.charAt(i);
       i++;
-
-      // mantém sempre "rolado" pro final sem mostrar scrollbar
       terminal.scrollTop = terminal.scrollHeight;
 
       setTimeout(escrever, 15);
