@@ -20,6 +20,14 @@
   max-height: 90vh;
 }
 
+/* esconder scrollbar */
+#terminal::-webkit-scrollbar {
+  display: none;
+}
+#terminal {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 /* HUD no canto direito */
 #hud {
   position: fixed;
@@ -144,11 +152,14 @@ clear
 const conteudo = document.getElementById("conteudo");
 
 setTimeout(iniciarTerminal, 4000);
-
+  
 function iniciarTerminal() {
+  const conteudo = document.getElementById("conteudo");
+
   conteudo.innerHTML = `
-<pre id="terminal"></pre>
-`;
+    <div id="terminal"></div>
+  `;
+
   boot();
 }
 
