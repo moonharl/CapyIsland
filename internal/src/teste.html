@@ -54,6 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 
 #ligar {
@@ -124,7 +125,7 @@ TERMINAL-CI-LTS-ENT-1998-v.2.314.1
     <span id="ligar">ligar</span>
   </div>
 
-  <div id="conteudo">
+  <div id="conteudo" style="display: none;">
   <pre class="intro">
  __         ______     ______   __  __     ______        ______     __   __     ______  
 /\ \       /\  __ \   /\__  _\ /\ \/\ \   /\  ___\      /\  ___\   /\ "-.\ \   /\__  _\ 
@@ -174,7 +175,6 @@ TERMINAL-CI-LTS-ENT-1998-v.2.314.1
   <div id="glare"></div>
   
 <script>
-const conteudo = document.getElementById("conteudo");
 const audio = new Audio("https://moonharl.github.io/CapyIsland/internal/src/lotus.mp3");
 audio.volume = 0.9;
 
@@ -182,14 +182,11 @@ const telaInicial = document.getElementById("telaInicial");
 const conteudo = document.getElementById("conteudo");
 
 document.getElementById("ligar").addEventListener("click", () => {
-  // libera áudio
   audio.play().catch(() => {});
 
-  // troca tela
   telaInicial.style.display = "none";
   conteudo.style.display = "block";
 
-  // inicia fluxo normal
   setTimeout(iniciarTerminal, 4000);
 });
   
