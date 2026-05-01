@@ -44,6 +44,27 @@
   font-size: 14px;
   opacity: 0.7;
 }
+  
+#telaInicial {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ligar {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#ligar:hover {
+  text-shadow: 0 0 10px hsl(154 84% 70%);
+}
   body {
     background: hsl(154 50% 5%);
     color: hsl(154 84% 70%);
@@ -99,6 +120,10 @@
   <div id="hud">
 TERMINAL-CI-LTS-ENT-1998-v.2.314.1
   </div>
+  <div id="telaInicial">
+    <span id="ligar">ligar</span>
+  </div>
+
   <div id="conteudo">
   <pre class="intro">
  __         ______     ______   __  __     ______        ______     __   __     ______  
@@ -150,20 +175,23 @@ TERMINAL-CI-LTS-ENT-1998-v.2.314.1
   
 <script>
 const conteudo = document.getElementById("conteudo");
-const audio = new Audio("https://moonharl/CapyIsland/blob/main/internal/src/lotus.mp3");
-audio.volume = 0.5;
+const audio = new Audio("https://moonharl.github.io/CapyIsland/internal/src/lotus.mp3");
+audio.volume = 0.9;
 
-// tenta tocar
-function tentarTocar() {
+const telaInicial = document.getElementById("telaInicial");
+const conteudo = document.getElementById("conteudo");
+
+document.getElementById("ligar").addEventListener("click", () => {
+  // libera áudio
   audio.play().catch(() => {});
-}
-// tenta automaticamente
-tentarTocar();
 
-// fallback se o navegador bloquear
-document.addEventListener("click", tentarTocar, { once: true });
-document.addEventListener("keydown", tentarTocar, { once: true });
-setTimeout(iniciarTerminal, 4000);
+  // troca tela
+  telaInicial.style.display = "none";
+  conteudo.style.display = "block";
+
+  // inicia fluxo normal
+  setTimeout(iniciarTerminal, 4000);
+});
   
 function iniciarTerminal() {
   const conteudo = document.getElementById("conteudo");
