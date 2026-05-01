@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <title>AnderShell 3000</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="author" href="https://plus.google.com/101576798387217383063" />
-    <link rel="publisher" href="https://plus.google.com/101576798387217383063" />
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Capy Terminal</title>
 
-    <!-- Application markup -->
-    <div id="crt">
-      <div id="screen">
-        <div id="wrapper">
-          <div id="interlace"></div>
-          <div id="scanline"></div>
-          <div id="envelope">
-            <div id="terminal"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
 
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35975596-1']);
-      _gaq.push(['_trackPageview']);
+<div id="terminal"></div>
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </body>
+<script type="module">
+  import { terminal } from './src/terminal.js';
+
+  terminal();
+</script>
+
+</body>
 </html>
