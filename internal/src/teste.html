@@ -150,7 +150,19 @@ TERMINAL-CI-LTS-ENT-1998-v.2.314.1
   
 <script>
 const conteudo = document.getElementById("conteudo");
+const audio = new Audio("lotus.mp3");
+audio.volume = 0.5;
 
+// tenta tocar
+function tentarTocar() {
+  audio.play().catch(() => {});
+}
+// tenta automaticamente
+tentarTocar();
+
+// fallback se o navegador bloquear
+document.addEventListener("click", tentarTocar, { once: true });
+document.addEventListener("keydown", tentarTocar, { once: true });
 setTimeout(iniciarTerminal, 4000);
   
 function iniciarTerminal() {
