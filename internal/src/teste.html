@@ -6,7 +6,16 @@
   padding: 0;
   overflow: hidden; /* remove barra de rolagem */
 }
-
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+  font-size: 12px; /* diminui aqui */
+  line-height: 1.1;
+}
 #conteudo {
   position: absolute;
   left: 20px;
@@ -95,16 +104,10 @@
 
 <body>
   <div id="hud">
-COMANDOS:
-
-help  
-iniciar  
-arquivos  
-login  
-clear  
+TERMINAL-CI-LTS-ENT-1998-v.2.314.1
   </div>
   <div id="conteudo">
-  <pre>
+  <pre class="intro">
  __         ______     ______   __  __     ______        ______     __   __     ______  
 /\ \       /\  __ \   /\__  _\ /\ \/\ \   /\  ___\      /\  ___\   /\ "-.\ \   /\__  _\ 
 \ \ \____  \ \ \/\ \  \/_/\ \/ \ \ \_\ \  \ \___  \     \ \  __\   \ \ \-.  \  \/_/\ \/ 
