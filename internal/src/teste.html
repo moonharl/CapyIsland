@@ -21,13 +21,6 @@
   max-width: 95vw;
   max-height: 95vh;
 }
-  
-#conteudo {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 70%;
-}
 
 #terminal {
   white-space: pre-wrap;
@@ -158,9 +151,25 @@ setTimeout(iniciarTerminal, 4000);
 function iniciarTerminal() {
   const conteudo = document.getElementById("conteudo");
 
+function iniciarTerminal() {
+  const conteudo = document.getElementById("conteudo");
+
   conteudo.innerHTML = `
-    <div id="terminal"></div>
+    <div id="terminal" style="
+      position:absolute;
+      left:20px;
+      top:20px;
+      width:70%;
+      height:90vh;
+      white-space: pre-wrap;
+      overflow-y: auto;
+      overflow-x: hidden;
+      font-family: monospace;
+    "></div>
   `;
+
+  boot();
+}
 
   boot();
 }
