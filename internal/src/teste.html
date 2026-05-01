@@ -1,6 +1,34 @@
 <html>
 <head>
 <style>
+  html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* remove barra de rolagem */
+}
+
+#conteudo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 70%;
+}
+
+#terminal {
+  white-space: pre-wrap;
+  overflow: hidden;
+  max-height: 90vh;
+}
+
+/* HUD no canto direito */
+#hud {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  font-size: 14px;
+  opacity: 0.7;
+}
   body {
     background: hsl(154 50% 5%);
     color: hsl(154 84% 70%);
@@ -58,6 +86,15 @@
 </head>
 
 <body>
+  <div id="hud">
+COMANDOS:
+
+help  
+iniciar  
+arquivos  
+login  
+clear  
+  </div>
   <div id="conteudo">
   <pre>
   _    _      _ _        __          __        _     _ 
@@ -106,7 +143,7 @@
 <script>
 const conteudo = document.getElementById("conteudo");
 
-setTimeout(iniciarTerminal, 8000);
+setTimeout(iniciarTerminal, 4000);
 
 function iniciarTerminal() {
   conteudo.innerHTML = `
@@ -124,6 +161,10 @@ function typeText(text, callback) {
     if (i < text.length) {
       terminal.innerHTML += text.charAt(i);
       i++;
+
+      // mantém sempre "rolado" pro final sem mostrar scrollbar
+      terminal.scrollTop = terminal.scrollHeight;
+
       setTimeout(escrever, 15);
     } else {
       if (callback) callback();
@@ -165,8 +206,10 @@ function digitar(e) {
   }
 
   if (e.key === "Backspace") {
-    buffer = buffer.slice(0, -1);
-    terminal.innerHTML = terminal.innerHTML.slice(0, -1);
+    if (buffer.length > 0) {
+      buffer = buffer.slice(0, -1);
+      terminal.innerHTML = terminal.innerHTML.slice(0, -1);
+    }
     return;
   }
 
@@ -174,6 +217,8 @@ function digitar(e) {
     buffer += e.key;
     terminal.innerHTML += e.key;
   }
+
+  terminal.scrollTop = terminal.scrollHeight;
 }
 
 // ====== COMANDOS ======
