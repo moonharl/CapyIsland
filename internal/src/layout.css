@@ -1,186 +1,36 @@
-body, html {
-	 width: 100%;
-	 height: 100%;
-}
- body {
-	 background-color: #000;
-	 font-size: 14px;
-	 font-family: sans-serif;
-	 color: #fff;
-	 display: flex;
-	 margin: 0;
-	 padding: 0;
-	 align-items: center;
-	 justify-content: center;
-}
- #info {
-	 position: absolute;
-	 bottom: 0;
-	 right: 0;
-	 padding: 0.5em;
-}
- #ga {
-	 position: absolute;
-	 bottom: 0;
-	 left: 0;
-}
-
-@media (max-width: 1280px) {
-  #crt {
-    width: 90vw;
-    height: 90vh;
-    font-size: $font-size / 2;
-  }
-}
-$background-color: #000;
-$color: #fff;
-$base-unit: 1em;
-$font-size: 18px;
-$chassis-background: #7b8e78;
-$chassis-margin: $base-unit * 3;
-$interlace-background: linear-gradient(#888 50%, #000 50%);
-$interlace-size: 4px;
-$envelope-background: rgba(#000, 0.25);
-$envelope-margin: 2em;
-$scanline-background: linear-gradient(to bottom, transparent 0%, rgba(255, 250, 250, 1) 50%, rgba(100, 255, 100, 1) 50%, transparent 100%);
-$output-font-family: 'monofont';
-$output-color: #18ff62;
-$output-text-shadow: rgba(10, 255, 10, 0.8);
-$output-line-height: 1.25;
-$gradient-bottom: rgb(0, 30, 30);
-$gradient-inner: rgb(0, 255, 119);
-
-@mixin fill($top: 0, $left: 0, $right: 0, $bottom: 0) {
-  position: absolute;
-  left: $left;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-}
-@font-face {
-  font-family: monofont;
-  font-weight: normal;
-  font-style: normal;
-  src: url('fonts/monofonto.eot');
-  src: url('fonts/monofonto.eot?#iefix') format('embedded-opentype'),
-    url('fonts/monofonto.woff') format('woff'),
-    url('fonts/monofonto.ttf') format('truetype'),
-    url('fonts/monofonto.svg#monofonto') format('svg');
-}
-
-@keyframes scanline {
-  0% {
+body {
+  background-color: black;
+  background-image: radial-gradient(
+    rgba(0, 150, 0, 0.75), black 120%
+  );
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem;
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+  &::after {
+    content: "";
+    position: absolute;
     top: 0;
-  }
-
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes skew {
-  0% {
-    transform: skewX(0.5deg);
-  }
-
-  8% {
-    transform: skewX(1deg) scale(1.0001);
-  }
-
-  15% {
-    transform: skewX(0.6deg) skewY(-0.05deg);
-  }
-
-  30% {
-    transform: skewX(0.6deg);
-  }
-
-  100% {
-    transform: skewX(0.1deg);
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(black, 0.15),
+      rgba(black, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
   }
 }
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.005);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+::selection {
+  background: #0080FF;
+  text-shadow: none;
 }
-
-@keyframes blur {
-  50% {
-    color: darken($output-color, 10%);
-    text-shadow: 2px 0 2px lighten($output-text-shadow, 50%);
-  }
-}
-
-@keyframes glow {
-  50% {
-    transform: scale(1.2);
-  }
-}
-@keyframes scanline {
-  0% {
-    top: 0;
-  }
-
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes skew {
-  0% {
-    transform: skewX(0.5deg);
-  }
-
-  8% {
-    transform: skewX(1deg) scale(1.0001);
-  }
-
-  15% {
-    transform: skewX(0.6deg) skewY(-0.05deg);
-  }
-
-  30% {
-    transform: skewX(0.6deg);
-  }
-
-  100% {
-    transform: skewX(0.1deg);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.005);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes blur {
-  50% {
-    color: darken($output-color, 10%);
-    text-shadow: 2px 0 2px lighten($output-text-shadow, 50%);
-  }
-}
-
-@keyframes glow {
-  50% {
-    transform: scale(1.2);
-  }
+pre {
+  margin: 0;
 }
