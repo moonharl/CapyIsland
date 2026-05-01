@@ -58,6 +58,7 @@
 </head>
 
 <body>
+  <div id="conteudo">
   <pre>
   _    _      _ _        __          __        _     _ 
  | |  | |    | | |       \ \        / /       | |   | |
@@ -97,8 +98,86 @@
     <p>Would you like to play a game?</p>
     <p>&gt;<span class="blink">_</span></p>
   </pre>
+  </div>
 
   <div id="interlaced"></div>  
   <div id="glare"></div>
+  
+  <script>
+  // depois de 8 segundos → vira terminal
+  setTimeout(mostrarTerminal, 8000);
+
+  function mostrarTerminal() {
+    document.getElementById("conteudo").innerHTML = `
+<pre>
+SYSTEM v1.0
+
+[1] Iniciar
+[2] Arquivos
+[3] Sair
+
+Digite uma opção:
+> <span class="blink" id="cursor">_</span>
+</pre>
+    `;
+
+    escutarInput();
+  }
+
+  function escutarInput() {
+    document.addEventListener("keydown", handleInput);
+  }
+
+  function handleInput(e) {
+    if (e.key === "1") iniciar();
+    if (e.key === "2") arquivos();
+    if (e.key === "3") sair();
+  }
+
+  function iniciar() {
+    document.getElementById("conteudo").innerHTML = `
+<pre>
+Inicializando...
+
+Carregando módulos...
+Acesso parcial concedido.
+
+[voltar = ESC]
+</pre>
+    `;
+  }
+
+  function arquivos() {
+    document.getElementById("conteudo").innerHTML = `
+<pre>
+ARQUIVOS:
+
+- log_001.txt
+- sistema.cfg
+- segredo.dat
+
+[voltar = ESC]
+</pre>
+    `;
+  }
+
+  function sair() {
+    document.getElementById("conteudo").innerHTML = `
+<pre>
+Encerrando sistema...
+
+Até logo.
+</pre>
+    `;
+  }
+
+  // voltar pro menu com ESC
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      mostrarTerminal();
+    }
+  });
+</script>
+  
 </body>
 </html>
