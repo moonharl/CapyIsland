@@ -103,80 +103,177 @@
   <div id="interlaced"></div>  
   <div id="glare"></div>
   
-  <script>
-  // depois de 8 segundos → vira terminal
-  setTimeout(mostrarTerminal, 8000);
+<script>
+const conteudo = document.getElementById("conteudo");
 
-  function mostrarTerminal() {
-    document.getElementById("conteudo").innerHTML = `
-<pre>
-SYSTEM v1.0
+setTimeout(iniciarTerminal, 8000);
 
-[1] Iniciar
-[2] Arquivos
-[3] Sair
+function iniciarTerminal() {
+  conteudo.innerHTML = `
+<pre id="terminal"></pre>
+`;
+  boot();
+}
 
-Digite uma opção:
-> <span class="blink" id="cursor">_</span>
-</pre>
-    `;
+// ====== EFEITO DE DIGITAÇÃO ======
+function typeText(text, callback) {
+  const terminal = document.getElementById("terminal");
+  let i = 0;
 
-    escutarInput();
-  }
-
-  function escutarInput() {
-    document.addEventListener("keydown", handleInput);
-  }
-
-  function handleInput(e) {
-    if (e.key === "1") iniciar();
-    if (e.key === "2") arquivos();
-    if (e.key === "3") sair();
-  }
-
-  function iniciar() {
-    document.getElementById("conteudo").innerHTML = `
-<pre>
-Inicializando...
-
-Carregando módulos...
-Acesso parcial concedido.
-
-[voltar = ESC]
-</pre>
-    `;
-  }
-
-  function arquivos() {
-    document.getElementById("conteudo").innerHTML = `
-<pre>
-ARQUIVOS:
-
-- log_001.txt
-- sistema.cfg
-- segredo.dat
-
-[voltar = ESC]
-</pre>
-    `;
-  }
-
-  function sair() {
-    document.getElementById("conteudo").innerHTML = `
-<pre>
-Encerrando sistema...
-
-Até logo.
-</pre>
-    `;
-  }
-
-  // voltar pro menu com ESC
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") {
-      mostrarTerminal();
+  function escrever() {
+    if (i < text.length) {
+      terminal.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(escrever, 15);
+    } else {
+      if (callback) callback();
     }
+  }
+
+  escrever();
+}
+
+// ====== BOOT ======
+function boot() {
+  typeText(
+`Inicializando sistema...
+Carregando módulos...
+Verificando integridade...
+
+Acesso concedido.
+
+Digite "help" para começar.
+
+> `, ativarInput);
+}
+
+// ====== INPUT ======
+let buffer = "";
+
+function ativarInput() {
+  document.addEventListener("keydown", digitar);
+}
+
+function digitar(e) {
+  const terminal = document.getElementById("terminal");
+
+  if (e.key === "Enter") {
+    terminal.innerHTML += "\n";
+    processarComando(buffer.trim());
+    buffer = "";
+    return;
+  }
+
+  if (e.key === "Backspace") {
+    buffer = buffer.slice(0, -1);
+    terminal.innerHTML = terminal.innerHTML.slice(0, -1);
+    return;
+  }
+
+  if (e.key.length === 1) {
+    buffer += e.key;
+    terminal.innerHTML += e.key;
+  }
+}
+
+// ====== COMANDOS ======
+function processarComando(cmd) {
+  const terminal = document.getElementById("terminal");
+
+  switch(cmd) {
+    case "help":
+      typeText(
+`\nComandos disponíveis:
+- iniciar
+- arquivos
+- login
+- clear
+
+> `);
+      break;
+
+    case "iniciar":
+      typeText(
+`\nIniciando sistema secundário...
+
+Erro: acesso limitado.
+
+> `);
+      break;
+
+    case "arquivos":
+      typeText(
+`\nArquivos encontrados:
+
+log_001.txt
+sistema.cfg
+segredo.dat
+
+> `);
+      break;
+
+    case "login":
+      pedirSenha();
+      break;
+
+    case "clear":
+      terminal.innerHTML = "> ";
+      break;
+
+    case "segredo":
+      telaSecreta();
+      break;
+
+    default:
+      typeText(`\nComando não reconhecido.\n\n> `);
+  }
+}
+
+// ====== SENHA ======
+function pedirSenha() {
+  typeText("\nDigite a senha: ", () => {
+    let senha = "";
+
+    function capturar(e) {
+      const terminal = document.getElementById("terminal");
+
+      if (e.key === "Enter") {
+        document.removeEventListener("keydown", capturar);
+
+        if (senha === "capy") {
+          typeText("\nAcesso TOTAL concedido.\n\n> ");
+        } else {
+          typeText("\nSenha incorreta.\n\n> ");
+        }
+
+        ativarInput();
+        return;
+      }
+
+      if (e.key.length === 1) {
+        senha += e.key;
+        terminal.innerHTML += "*";
+      }
+    }
+
+    document.removeEventListener("keydown", digitar);
+    document.addEventListener("keydown", capturar);
   });
+}
+
+// ====== SEGREDO ======
+function telaSecreta() {
+  typeText(
+`\n████ ACESSO OCULTO ████
+
+Projeto CI_64 detectado...
+Integridade: CORROMPIDA
+
+Mensagem:
+"NÃO ERA PARA TER SIDO ABERTO"
+
+> `);
+}
 </script>
   
 </body>
