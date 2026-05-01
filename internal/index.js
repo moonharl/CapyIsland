@@ -1,5 +1,5 @@
-import './internal/src/styles.scss';
-import {terminal} from './internal/src/terminal.js';
+import './src/styles.scss';
+import {terminal} from './src/terminal.js';
 
 // Banner text
 const banner = `
