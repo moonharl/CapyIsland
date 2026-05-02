@@ -1,7 +1,7 @@
 const flashlight = document.querySelector('.flashlight');
 
 document.addEventListener('mousemove', (e) => {
-  let x = e.clientX - (document.documentElement.clientWidth * 1.5);
-  let y = e.clientY - (document.documentElement.clientHeight * 1.5);
+  let x = e.clientX;
+  let y = e.clientY;
   flashlight.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
 })
