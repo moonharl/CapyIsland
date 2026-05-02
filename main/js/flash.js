@@ -1,15 +1,7 @@
-const flashlight = document.getElementById("flashlight");
+const shadow = document.querySelector('.flashlight');
 
-const isTouchDevice =
-  'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-function getMousePosition(e) {
-  const x = isTouchDevice ? e.touches[0].pageX : e.pageX;
-  const y = isTouchDevice ? e.touches[0].pageY : e.pageY;
-
-  flashlight.style.setProperty("--Xpos", x + "px");
-  flashlight.style.setProperty("--Ypos", y + "px");
-}
-
-document.addEventListener("mousemove", getMousePosition);
-document.addEventListener("touchmove", getMousePosition);
+document.addEventListener('mousemove', (e) => {
+  let x = e.clientX - (document.documentElement.clientWidth * 1.5);
+  let y = e.clientY - (document.documentElement.clientHeight * 1.5);
+  shadow.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+})
