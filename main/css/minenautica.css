@@ -242,17 +242,22 @@
     height: 100vh;
     pointer-events: none;
 }
-
 #flashlight::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        circle 9em at var(--Xpos) var(--Ypos),
-        transparent,
-        rgba(0,0,0,1)
-    );
+
+    width: 150px;
+    height: 150px;
+
+    left: var(--Xpos);
+    top: var(--Ypos);
+
+    transform: translate(-50%, -50%);
+	filter: blur(20px);
+    box-shadow: 0 0 0 9999px rgba(0,0,0,1);
+    background: transparent;
 }
+
 .projectButton {
     border-top: #db8b3b solid 2px;
     border-bottom: #523417 solid 2px;
