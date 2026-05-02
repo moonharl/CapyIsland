@@ -238,7 +238,7 @@
   height: 200vh;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
   background-image: radial-gradient(circle at center, transparent, #000 20%);
 }
 
