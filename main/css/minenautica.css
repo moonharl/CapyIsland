@@ -232,31 +232,14 @@
     color: white;
 }
 
-#flashlight {
-    --Xpos: 50vw;
-    --Ypos: 50vh;
-
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-	z-index: 99999;
-}
-#flashlight::before {
-    content: "";
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    left: var(--Xpos);
-    top: var(--Ypos);
-
-    transform: translate(-50%, -50%);
-	filter: blur(20px);
-    box-shadow: 0 0 0 9999px rgba(0,0,0,1);
-    background: transparent;
+.flashlight {
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: radial-gradient(circle at center, transparent, #000 20%);
 }
 
 .projectButton {
