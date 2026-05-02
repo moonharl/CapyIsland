@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    cursor: none;
+}
+
 ​:root {
   cursor: none;
   --cursorX: 50vw;
