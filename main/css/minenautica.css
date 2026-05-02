@@ -233,13 +233,19 @@
 }
 
 .flashlight {
-  position: absolute;
-  width: 200vw;
-  height: 200vh;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-image: radial-gradient(circle at center, transparent, #000 20%);
+    position: fixed;
+    width: 150px;
+    height: 150px;
+
+    left: 0;
+    top: 0;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+    z-index: 99999;
+
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.95);
 }
 
 .projectButton {
