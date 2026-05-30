@@ -14,35 +14,115 @@
     <link rel="stylesheet" href="css/loja.css">
     <link rel="stylesheet" href="css/v.css">
     <script src="js/v.js"></script>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+#game {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+#scene {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0); /* invisível */
+    /* Para testar durante o desenvolvimento:
+       background: rgba(255,0,0,0.25);
+       border: 2px solid red; */
+}
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="bannerTop"></div>
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="./inicio.html">Início</a></li>
-                    <li><a href="./C-637.html">Arquivos</a></li>
-                    <li><a href="./loja.html">Sobre</a></li>
-                    <li><a style="color: rgb(100, 235, 28);" href="./confidencial.html">Confidencial</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="clear"></div>
-        <div class="glitch-wrapper">
-            <div class="glitch" data-text="3497 1574">CAPY ISLAND</div>
-        </div>
 
-        <div class="extra">
-        </div>
+<div id="game">
+    <img id="scene" src="" alt="Cena do jogo">
+</div>
 
-        <div class="clear"></div>
-        <div class="breakUp"></div>
-        <footer>
-            <p>Capy Island © 2018-2025. Todos os direitos reservados.</p>
-        </footer>
-    </div>
+<script>
+// =======================
+// DEFINIÇÃO DAS CENAS
+// =======================
+const scenes = {
+    cozinha: {
+        image: "imagens/cozinha.jpg", // coloque a imagem na pasta "imagens"
+        hotspots: [
+            {x: 150, y: 180, width: 180, height: 420, target: "quarto"},
+            {x: 950, y: 170, width: 180, height: 420, target: "sala"}
+        ]
+    },
+    quarto: {
+        image: "imagens/quarto.jpg",
+        hotspots: [
+            {x: 20, y: 250, width: 120, height: 250, target: "cozinha"}
+        ]
+    },
+    sala: {
+        image: "imagens/sala.jpg",
+        hotspots: [
+            {x: 1050, y: 250, width: 120, height: 250, target: "cozinha"}
+        ]
+    }
+};
+
+// =======================
+// MOTOR DO JOGO
+// =======================
+const game = document.getElementById("game");
+const sceneImg = document.getElementById("scene");
+
+function clearHotspots() {
+    document.querySelectorAll(".hotspot").forEach(el => el.remove());
+}
+
+function loadScene(sceneName) {
+    const scene = scenes[sceneName];
+    if(!scene){
+        console.error("Cena não encontrada:", sceneName);
+        return;
+    }
+
+    sceneImg.src = scene.image;
+
+    clearHotspots();
+
+    scene.hotspots.forEach(h => {
+        const btn = document.createElement("div");
+        btn.className = "hotspot";
+        btn.style.left = h.x + "px";
+        btn.style.top = h.y + "px";
+        btn.style.width = h.width + "px";
+        btn.style.height = h.height + "px";
+        btn.addEventListener("click", () => {
+            loadScene(h.target);
+        });
+        game.appendChild(btn);
+    });
+}
+
+// Cena inicial
+loadScene("cozinha");
+</script>
 
 </body>
 
