@@ -1,69 +1,109 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CI Terminal</title>
-
 <style>
-html, body {
+  html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: hsl(154 50% 5%);
-  font-family: monospace;
-  color: hsl(154 84% 70%);
-  text-shadow: 0 0 4px hsl(154 84% 70%);
+}
+  
+.intro {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.1;
+  white-space: pre;
+
+  max-width: 450px;
+  max-height: 350px;
 }
 
-/* ===== PC EXTERNO ===== */
-#pc {
+#terminal {
+  white-space: pre-wrap;
+  overflow: hidden;
+  max-height: 90vh;
+}
+
+#terminal::-webkit-scrollbar {
+  display: none;
+}
+#terminal {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#hud {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+  font-size: 11px;
+  opacity: 0.7;
+}
+  
+#backg {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -2;
+  pointer-events: none;
+}
+  
+#pc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('https://i.imgur.com/VP8m2Dc.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 10;
+  pointer-events: none;
 }
 
-/* ===== TELA DO PC FIXA ===== */
 #pcScreen {
-  position: absolute;
-  width: 500px;
-  height: 300px;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 14%;
+  left: 33%;
+  width: 462px;
+  height: 350px;
 
   overflow: hidden;
-}
 
-/* ===== OVERLAY CRT ===== */
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
 #overlay {
   position: absolute;
-  inset: 0;
+  width: 462px;
+  height: 350px;
   background-image: url('https://i.imgur.com/LrwVL8R.jpeg');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   mix-blend-mode: multiply;
-  pointer-events: none;
   z-index: 5;
+  pointer-events: none;
 }
-
-/* ===== HUD ===== */
-#hud {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  font-size: 10px;
-  opacity: 0.7;
-  z-index: 10;
-}
-
-/* ===== BOTÃO LIGAR ===== */
+  
 #telaInicial {
   position: absolute;
-  inset: 0;
+  top: 10px;
+  right: 10px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,114 +111,185 @@ html, body {
 }
 
 #ligar {
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
   transition: 0.2s;
+  z-index: 21;
 }
 
 #ligar:hover {
   text-shadow: 0 0 10px hsl(154 84% 70%);
 }
+  body {
+    background: hsl(154 50% 5%);
+    color: hsl(154 84% 70%);
+    text-shadow: 0 0 4px hsl(154 84% 70%);
+    font-family: monospace;
+    font-size: 16px;
+  }
 
-/* ===== TERMINAL ===== */
-#terminal {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 460px;
-  height: 260px;
+  #glare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: radial-gradient(hsl(154 5% 15%) 0%, hsl(154 50% 5%) 70%);
+  }
 
-  overflow-y: auto;
-  white-space: pre-wrap;
+  @keyframes lines {
+    0% {background-position: 0px 0px}
+    50% {background-position: 0px 0px}
+    51% {background-position: 0px 2px}
+    100% {background-position: 0px 2px}
+  }
 
-  z-index: 15;
-  display: none;
-}
+  #interlaced {
+    position: absolute;
+    background: repeating-linear-gradient(transparent 0px 1px, hsl(154 0% 0%/.3) 3px 4px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    pointer-events: none;
+    animation: lines 0.066666666s linear infinite;
+  }
 
-/* ===== CRT LINES ===== */
-#interlaced {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    transparent 0px,
-    rgba(0,0,0,0.25) 2px
-  );
-  pointer-events: none;
-  z-index: 6;
-}
+  @keyframes blink {
+    0% {opacity: 0}
+    30% {opacity: 1}
+    70% {opacity: 1}
+    100% {opacity: 0}
+  }
 
-/* ===== INTRO ASCII ===== */
-.intro {
-  font-size: 10px;
-  line-height: 1.1;
-  white-space: pre;
-}
+  .blink {
+    animation: blink 0.4s linear infinite;
+  }
 </style>
+    <script src="https://moonharl.github.io/CapyIsland/script.js"></script>
 </head>
 
 <body>
-
-<div id="pc">
-  <div id="pcScreen">
-
-    <div id="overlay"></div>
-    <div id="interlaced"></div>
-
-    <div id="hud">
-      TERMINAL-CI-LTS-ENT-1998-v.2.314.1
-    </div>
-
-    <!-- BOTÃO LIGAR -->
-    <div id="telaInicial">
-      <div id="ligar">ligar</div>
-    </div>
-
-    <!-- TERMINAL -->
-    <div id="terminal"></div>
-
+  <div id="backg">
+  <div id="pc"></div>
+  <div id="telaInicial">
+    <span id="ligar">ligar</span>
   </div>
-</div>
+  <div id="pcScreen">
+  <div id="overlay"></div>
+  <div id="hud">
+TERMINAL-CI-LTS-ENT-1998-v.2.314.1
+  </div>
 
+  <div id="conteudo" style="display: none;">
+  <pre class="intro">
+ __         ______     ______   __  __     ______        ______     __   __     ______  
+/\ \       /\  __ \   /\__  _\ /\ \/\ \   /\  ___\      /\  ___\   /\ "-.\ \   /\__  _\ 
+\ \ \____  \ \ \/\ \  \/_/\ \/ \ \ \_\ \  \ \___  \     \ \  __\   \ \ \-.  \  \/_/\ \/ 
+ \ \_____\  \ \_____\    \ \_\  \ \_____\  \/\_____\     \ \_____\  \ \_\\"\_\    \ \_\ 
+  \/_____/   \/_____/     \/_/   \/_____/   \/_____/      \/_____/   \/_/ \/_/     \/_/ 
+                                                                                        
+                                                                                                                    
+                                                                                                                    
+                                                    $$$$$                                                           
+                                                    $$$$$                                                           
+                                                    $$$$$                                                           
+                                                  $$$$$$$$$                                                         
+                                              $$$ $$$$$$$$$ $$$                                                     
+                                              $$$ $$$$$$$$$ $$$                                                     
+                                              $$$ $$$$$$$$$ $$$$                                                    
+                                      $$$   $$$$$ $$$$$$$$$ $$$$$   $$$                                             
+                                      $$$ $$$$$$$ $$$$$$$$$ $$$$$$$ $$$                                             
+                                    $$$$$ $$$$$   $$$$$$$$$   $$$$$ $$$$$                                           
+                                    $$$$$ $$$$$ $$$$$$$$$$$$$ $$$$$ $$$$$                                           
+                                  $$$$$$$   $$$ $$$$$$$$$$$$$ $$$$  $$$$$$$                                         
+                          $$$   $$$$$$$$$$$     $$$$$$$$$$$$$     $$$$$$$$$$$   $$$$                                
+                         $$$$   $$$$$$$$$$$ $$$$$$$$$$$$$$$$$$$$$ $$$$$$$$$$$   $$$$$                               
+                         $$$$$$  $$$$$$$$$$ $$$$$$$$$$$$$$$$$$$$$ $$$$$$$$$$  $$$$$$$                               
+                         $$$$$$$$ $$$$$$$$$ $$$$$$$$$$$$$$$$$$$$$ $$$$$$$$$ $$$$$$$$$                               
+                          $$$$$$$ $$$$$$$$$$$ $$$$$$$$$$$$$$$$$ $$$$$$$$$$$ $$$$$$$                                 
+                           $$$$$$ $$$$$$$$$$$ $$$$$$$$$$$$$$$$$ $$$$$$$$$$$ $$$$$$$                                 
+                             $$$$ $$$$$$$$$$$$$ $$$$$$$$$$$$$ $$$$$$$$$$$$$ $$$$$                                   
+                              $$$   $$$$$$$$$$$ $$$$$$$$$$$$$ $$$$$$$$$$$   $$$                                     
+                      $$$$$$$         $$$$$$$$$$    $$$$$$   $$$$$$$$$$         $$$$$$$                             
+                       $$$$$$$$$$$$$$   $$$$$$$$$$$ $$$$$ $$$$$$$$$$$   $$$$$$$$$$$$$$$                             
+                        $$$$$$$$$$$$$$$   $$$$$$$           $$$$$$$   $$$$$$$$$$$$$$$                               
+                             $$$$$$$$$$$$         $$$$$$$$$         $$$$$$$$$$$$$                                   
+                              $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$                                     
+                                  $$$$$$$$$$$$$$$$$$$   $$$$$$$$$$$$$$$$$$$                                         
+                                     $$$$$$$$$$$$$$        $$$$$$$$$$$                                              
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+
+  </pre>
+  </div>
+
+  <div id="interlaced"></div>  
+  <div id="glare"></div>
+  </div></div>
+  
 <script>
 const audio = new Audio("https://moonharl.github.io/CapyIsland/internal/src/lotus.mp3");
 audio.volume = 0.9;
 
 const telaInicial = document.getElementById("telaInicial");
-const terminal = document.getElementById("terminal");
+const conteudo = document.getElementById("conteudo");
 
 document.getElementById("ligar").addEventListener("click", () => {
   audio.play().catch(() => {});
 
   telaInicial.style.display = "none";
-  terminal.style.display = "block";
+  conteudo.style.display = "block";
 
-  setTimeout(iniciarTerminal, 3000);
+  setTimeout(iniciarTerminal, 4000);
 });
-
+  
 function iniciarTerminal() {
-  terminal.innerHTML = "";
+  const conteudo = document.getElementById("conteudo");
+
+  conteudo.innerHTML = `
+    <div id="terminal" style="
+      position:absolute;
+      left:20px;
+      top:20px;
+      width:70%;
+      height:80%;
+      white-space: pre-wrap;
+      overflow-y: auto;
+      overflow-x: hidden;
+      font-family: monospace;
+    "></div>
+  `;
+
   boot();
 }
 
-/* ===== TYPE EFFECT ===== */
+// ====== EFEITO DE DIGITAÇÃO ======
 function typeText(text, callback) {
+  const terminal = document.getElementById("terminal");
   let i = 0;
 
-  function write() {
+  function escrever() {
     if (i < text.length) {
-      terminal.innerHTML += text[i];
+      terminal.innerHTML += text.charAt(i);
       i++;
       terminal.scrollTop = terminal.scrollHeight;
-      setTimeout(write, 12);
+
+      setTimeout(escrever, 15);
     } else {
       if (callback) callback();
     }
   }
 
-  write();
+  escrever();
 }
 
-/* ===== BOOT ===== */
+// ====== BOOT ======
 function boot() {
   typeText(
 `Inicializando sistema...
@@ -189,11 +300,10 @@ Acesso concedido.
 
 Digite "help" para começar.
 
-> `,
-  ativarInput);
+> `, ativarInput);
 }
 
-/* ===== INPUT ===== */
+// ====== INPUT ======
 let buffer = "";
 
 function ativarInput() {
@@ -201,7 +311,7 @@ function ativarInput() {
 }
 
 function digitar(e) {
-  if (!terminal) return;
+  const terminal = document.getElementById("terminal");
 
   if (e.key === "Enter") {
     terminal.innerHTML += "\n";
@@ -211,8 +321,10 @@ function digitar(e) {
   }
 
   if (e.key === "Backspace") {
-    buffer = buffer.slice(0, -1);
-    terminal.innerHTML = terminal.innerHTML.slice(0, -1);
+    if (buffer.length > 0) {
+      buffer = buffer.slice(0, -1);
+      terminal.innerHTML = terminal.innerHTML.slice(0, -1);
+    }
     return;
   }
 
@@ -224,26 +336,40 @@ function digitar(e) {
   terminal.scrollTop = terminal.scrollHeight;
 }
 
-/* ===== COMANDOS ===== */
+// ====== COMANDOS ======
 function processarComando(cmd) {
-  switch(cmd) {
+  const terminal = document.getElementById("terminal");
 
+  switch(cmd) {
     case "help":
-      typeText(`\nComandos:
+      typeText(
+`\nComandos disponíveis:
 - iniciar
 - arquivos
 - login
-- clear\n\n> `);
+- clear
+
+> `);
       break;
 
     case "iniciar":
-      typeText(`\nSistema secundário iniciado...\nErro: acesso limitado.\n\n> `);
+      typeText(
+`\nIniciando sistema secundário...
+
+Erro: acesso limitado.
+
+> `);
       break;
 
     case "arquivos":
-      typeText(`\nlog_001.txt
+      typeText(
+`\nArquivos encontrados:
+
+log_001.txt
 sistema.cfg
-segredo.dat\n\n> `);
+segredo.dat
+
+> `);
       break;
 
     case "login":
@@ -255,9 +381,7 @@ segredo.dat\n\n> `);
       break;
 
     case "segredo":
-      typeText(`\n████ ACESSO OCULTO ████
-Projeto CI_64 detectado...
-"NÃO ERA PARA TER SIDO ABERTO"\n\n> `);
+      telaSecreta();
       break;
 
     default:
@@ -265,12 +389,13 @@ Projeto CI_64 detectado...
   }
 }
 
-/* ===== SENHA ===== */
+// ====== SENHA ======
 function pedirSenha() {
   typeText("\nDigite a senha: ", () => {
     let senha = "";
 
     function capturar(e) {
+      const terminal = document.getElementById("terminal");
 
       if (e.key === "Enter") {
         document.removeEventListener("keydown", capturar);
@@ -285,12 +410,6 @@ function pedirSenha() {
         return;
       }
 
-      if (e.key === "Backspace") {
-        senha = senha.slice(0, -1);
-        terminal.innerHTML = terminal.innerHTML.slice(0, -1);
-        return;
-      }
-
       if (e.key.length === 1) {
         senha += e.key;
         terminal.innerHTML += "*";
@@ -301,7 +420,21 @@ function pedirSenha() {
     document.addEventListener("keydown", capturar);
   });
 }
-</script>
 
+// ====== SEGREDO ======
+function telaSecreta() {
+  typeText(
+`\n████ ACESSO OCULTO ████
+
+Projeto CI_64 detectado...
+Integridade: CORROMPIDA
+
+Mensagem:
+"NÃO ERA PARA TER SIDO ABERTO"
+
+> `);
+}
+</script>
+  
 </body>
 </html>
