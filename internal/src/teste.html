@@ -47,10 +47,20 @@
   
 #telaInicial {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 900px;
   height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+  
+#telaInicial {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,6 +128,7 @@
 </head>
 
 <body>
+  <div id="pc">
   <div id="hud">
 TERMINAL-CI-LTS-ENT-1998-v.2.314.1
   </div>
@@ -173,6 +184,7 @@ TERMINAL-CI-LTS-ENT-1998-v.2.314.1
 
   <div id="interlaced"></div>  
   <div id="glare"></div>
+  </div>
   
 <script>
 const audio = new Audio("https://moonharl.github.io/CapyIsland/internal/src/lotus.mp3");
