@@ -240,15 +240,23 @@ audio.volume = 0.9;
 const telaInicial = document.getElementById("telaInicial");
 const conteudo = document.getElementById("conteudo");
 
-document.getElementById("ligar").addEventListener("click", () => {
+let ligado = false;
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !ligado) {
+    ligado = true;
+    iniciarSistema();
+  }
+});
+  
+function iniciarSistema() {
   audio.play().catch(() => {});
 
   telaInicial.style.display = "none";
   conteudo.style.display = "block";
 
   setTimeout(iniciarTerminal, 4000);
-});
-  
+}
 function iniciarTerminal() {
   const conteudo = document.getElementById("conteudo");
 
