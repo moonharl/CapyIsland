@@ -18,8 +18,8 @@
   line-height: 1.1;
   white-space: pre;
 
-  max-width: 95vw;
-  max-height: 95vh;
+  max-width: 450px;
+  max-height: 350px;
 }
 
 #terminal {
@@ -55,19 +55,20 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 10;
+  inset: 0;
   pointer-events: none; /* só se você quiser que clique no pc não interfira */
 }
 
 #pcScreen {
   position: relative;
-  top: 15%;
-  left: 32%;
+  top: 14%;
+  left: 34%;
   width: 450px;
   height: 350px;
 
   overflow: hidden;
 
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,13 +96,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 6;
 }
 
 #ligar {
   font-size: 24px;
   cursor: pointer;
   transition: 0.2s;
+  z-index: 5;
 }
 
 #ligar:hover {
