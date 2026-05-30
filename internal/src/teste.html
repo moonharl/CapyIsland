@@ -54,14 +54,18 @@
   background-image: url('https://i.imgur.com/VP8m2Dc.png');
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   z-index: 10;
   pointer-events: none; /* só se você quiser que clique no pc não interfira */
 }
 
 #pcScreen {
   position: relative;
-  width: 900px;   /* tamanho da tela do PC */
-  height: 600px;
+  width: 500px;   /* tamanho da tela do PC */
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   pointer-events: auto; /* permite interação dentro da tela */
 }
