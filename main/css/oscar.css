@@ -10,11 +10,11 @@ html, body {
     background-position: top;
     background-size: cover;
     overflow: auto;
-    scrollbar-width: none; /* Para Firefox */
-    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
-    display: none; /* Para navegadores baseados em WebKit (Chrome, Safari) */
+    display: none;
 }
 
 .article {
@@ -94,44 +94,44 @@ html, body {
 
 .containera {
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: auto; /* Ajusta a altura conforme necessário */
-    gap: 10px; /* Espaço entre as setas e o carrossel */
+    height: auto;
+    gap: 10px;
 }
 
 .carousela {
-    flex: 1; /* Ocupa o espaço disponível entre as setas */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Centraliza os slides */
-    align-items: center; /* Garante alinhamento vertical */
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    position: relative; /* Necessário para os slides ficarem corretamente */
-    max-width: 800px; /* Ajuste conforme necessário */
-    height: 450px; /* Ajuste conforme necessário */
+    position: relative;
+    max-width: 800px;
+    height: 450px;
 }
 
 .slidea {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0; /* Torna invisível sem ocupar espaço */
-    transition: opacity 1s ease-in-out; /* Suaviza a transição */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
     display: flex;
-    justify-content: center; /* Centraliza a imagem no slide */
+    justify-content: center;
     align-items: center;
 }
 
 .slidea.active {
-    opacity: 1; /* Torna a imagem ativa visível */
-    z-index: 1; /* Garante que fique na frente */
+    opacity: 1;
+    z-index: 1;
 }
 
 .slidea img {
-    max-width: 100%; /* Mantém a imagem responsiva */
+    max-width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    object-fit: cover;
 }
 
 .arrowa {
