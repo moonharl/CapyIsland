@@ -63,25 +63,31 @@ body {
 // DEFINIÇÃO DAS CENAS
 // =======================
 const scenes = {
-    cozinha: {
+    inicio: {
         image: "https://i.imgur.com/Q7tUlIV.jpeg", // coloque a imagem na pasta "imagens"
         hotspots: [
-            {x: 150, y: 180, width: 180, height: 420, target: "quarto"},
-            {x: 710, y: 330, width: 80, height: 80, target: "sala"}
+            {x: 710, y: 330, width: 80, height: 80, target: "frente"}
         ]
     },
-    quarto: {
+    frente: {
         image: "https://i.imgur.com/iFouJGW.jpeg",
         hotspots: [
-            {x: 20, y: 250, width: 120, height: 250, target: "cozinha"}
+            {x: 150, y: 180, width: 80, height: 80, target: "curva"},
+            {x: 1050, y: 250, width: 80, height: 80, target: "inicio"}
         ]
     },
-    sala: {
-        image: "imagens/sala.jpg",
+    curva: {
+        image: "https://i.imgur.com/y4TEeEZ.jpeg",
         hotspots: [
-            {x: 1050, y: 250, width: 120, height: 250, target: "cozinha"}
+            {x: 20, y: 250, width: 80, height: 80, target: "pilares"}
         ]
-    }
+    },
+    pilares: {
+        image: "https://i.imgur.com/Yym6PJw.jpeg",
+        hotspots: [
+            {x: 20, y: 250, width: 80, height: 80, target: "null"}
+        ]
+    },
 };
 
 // =======================
@@ -120,7 +126,7 @@ function loadScene(sceneName) {
 }
 
 // Cena inicial
-loadScene("cozinha");
+loadScene("inicio");
 </script>
 
 </body>
