@@ -13,8 +13,6 @@ html, body {
     background-position: center;
     background-size: 256px;
     background-color: black;
-    cursor: url("https://i.imgur.com/YL2mYK7.png"), default;
-    cursor: url("https://i.imgur.com/sAmNejV.png"), pointer;
     overflow: auto;
     scrollbar-width: none; /* Para Firefox */
     -ms-overflow-style: none; /* Para Internet Explorer e Edge */
