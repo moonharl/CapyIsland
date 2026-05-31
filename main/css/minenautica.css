@@ -209,9 +209,8 @@ body {
 }
 
 .minenauticaButton {
-    background-color: #489CC7;
-    border-top: #86D5F0 solid 2px;
-    border-bottom: #438DB0 solid 2px;
+    border: var(--border-thickness) solid #489CC7;
+    box-shadow: 0px var(--border-2x-thickness) 0px #86D5F0, 0 0 0 var(--border-thickness) #438DB0, 0 var(--border-2x-thickness) 0 var(--border-thickness) #438DB0;
     font-family: Monocraft;
     font-size: 14px;
     text-align: center;
