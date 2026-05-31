@@ -209,22 +209,24 @@ body {
 }
 
 .minenauticaButton {
+	background-color: #86D5F0;
     border: var(--border-thickness) solid #489CC7;
     box-shadow: 0px var(--border-2x-thickness) 0px #86D5F0, 0 0 0 var(--border-thickness) #438DB0, 0 var(--border-2x-thickness) 0 var(--border-thickness) #438DB0;
+    display: inline-block;
     font-family: 'Minecraft', sans-serif;
     font-size: 14px;
-    text-align: center;
     color: white;
     padding: 5px 10px;
-    float: middle;
-    height: 20px;
-    width: 80px;
-    background-position: center;
-    background-size: cover;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.05s ease-in-out;
+    min-width: 100px;
 }
 
 .minenauticaButton a {   
     text-decoration: none;
+    font-family: Monocraft;
+    font-size: 14px;
     color: white;
 }
 
