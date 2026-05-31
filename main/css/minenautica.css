@@ -213,8 +213,8 @@ body {
 
 .minenauticaButton {
 	background-color: #86D5F0;
-    border: var(--border-thickness) solid #489CC7;
-    box-shadow: 0px var(--border-2x-thickness) 0px #86D5F0, 0 0 0 var(--border-thickness) #438DB0, 0 var(--border-2x-thickness) 0 var(--border-thickness) #438DB0;
+    border: 3px solid #489CC7;
+    box-shadow: 0px 6px 0px #86D5F0, 0 0 0 3px #438DB0, 0 6px 0 3px #438DB0;
     display: inline-block;
     font-family: 'Minecraft', sans-serif;
     font-size: 14px;
