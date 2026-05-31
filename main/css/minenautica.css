@@ -13,8 +13,6 @@ body {
   cursor: none;
   --cursorX: 50vw;
   --cursorY: 50vh;
-  --border-thickness: 3px;
-  --border-2x-thickness: calc(2 * var(--border-thickness));
 }
 
 :root:before {
