@@ -241,7 +241,6 @@ audio.volume = 0.9;
 
 const telaInicial = document.getElementById("telaInicial");
 const conteudo = document.getElementById("conteudo");
-const version = document.getElementById("hud");
 
 let ligado = false;
 
@@ -257,11 +256,13 @@ function iniciarSistema() {
 
   telaInicial.style.display = "none";
   conteudo.style.display = "block";
-  version.style.opacity = "0.8";
 
   setTimeout(iniciarTerminal, 4000);
 }
 function iniciarTerminal() {
+  const version = document.getElementById("hud");
+  version.style.opacity = "0.8";
+  
   const conteudo = document.getElementById("conteudo");
 
   conteudo.innerHTML = `
