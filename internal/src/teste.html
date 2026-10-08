@@ -171,6 +171,14 @@
   }
 </style>
     <script src="https://moonharl.github.io/CapyIsland/script.js"></script>
+<script>
+  const mobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  if (mobile) {
+    window.location.replace("./mobile.html");
+  }
+</script>
 </head>
 
 <body>
