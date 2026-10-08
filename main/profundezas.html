@@ -46,10 +46,7 @@ body {
     position: absolute;
     background: rgba(255, 0, 0, 0.25);
     cursor: url("https://i.imgur.com/sAmNejV.png"), pointer;
-    border: 2px solid red; /* invisível */
-    /* Para testar durante o desenvolvimento:
-       background: rgba(255,0,0,0.25);
-       border: 2px solid red; */
+    border: 2px solid red;
 }
 </style>
 </head>
@@ -58,14 +55,12 @@ body {
 <div id="game">
     <img id="scene" src="" alt="Cena do jogo">
 </div>
-
+<div class="flashlight"></div>
+    
 <script>
-// =======================
-// DEFINIÇÃO DAS CENAS
-// =======================
 const scenes = {
     inicio: {
-        image: "https://i.imgur.com/Q7tUlIV.jpeg", // coloque a imagem na pasta "imagens"
+        image: "https://i.imgur.com/Q7tUlIV.jpeg",
         hotspots: [
             {x: 710, y: 330, width: 80, height: 80, target: "frente"}
         ]
@@ -90,10 +85,6 @@ const scenes = {
         ]
     },
 };
-
-// =======================
-// MOTOR DO JOGO
-// =======================
 const game = document.getElementById("game");
 const sceneImg = document.getElementById("scene");
 
